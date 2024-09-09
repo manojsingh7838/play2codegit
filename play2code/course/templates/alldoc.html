@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Doc</title>
+  <title>PLAY 2 CODE</title>
 
   <!-- Meta -->
   <meta charset="utf-8">
@@ -215,6 +215,8 @@
     .btn-validator {margin: 3rem 0;border-radius: 1.5rem;align-items: center;}
     .btn-validator::before {content: "";display: block;width: 16px;height: 16px;background-position: center;background-repeat: no-repeat;background-size: 16px;margin-right: 12px;background-image: url("data:image/svg+xml,%3Csvg fill='%23fff' xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-check-circle-fill' viewBox='0 0 16 16'%3E%3Cpath d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z'/%3E%3C/svg%3E");}
     caption {padding: 0.75rem;border: 1px solid #e7e9ed;border-top: 0;font-size: 0.9rem;background-color: #f2f2f24d;}
+
+
     .docs-section{
       margin-bottom: -50px;
     }
@@ -224,18 +226,156 @@
     .section-heading{
       cursor: pointer;
     }
-    .logo{
-      margin-top: -10px;
-      width:40px;
-      border-radius: 50%;
-    }
     .navbar-brand .logod{
-      font-size: 135%;
+      font-size: 110%;
     }
     span .two{
-      color: blue;
-      font-weight: 500;
+      color: red;
+      font-weight: 700;
+      font-size: 40px;
     }
+
+
+    .lvl2 {
+      display: none;
+      margin-left: 20px;
+  }
+  .section-title {
+      cursor: pointer;
+      font-weight: bold;
+  }
+  .nav-link {
+      text-decoration: none;
+      color: #007bff;
+  }
+  .nav-link:hover {
+      text-decoration: underline;
+  }
+
+
+  .modal-content {
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+    padding: 1.5rem;
+}
+
+.modal-header {
+    border-bottom: none;
+    padding-bottom: 1.5rem;
+}
+
+.modal-title {
+    font-weight: 600;
+    color: #343a40;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #495057;
+}
+
+.form-control {
+    border-radius: 0.5rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-color: #ced4da;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+.form-check-label {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.modal-footer {
+    border-top: none;
+    padding-top: 1rem;
+}
+
+
+.sty{
+  font-size: 19px;
+}
+
+.sty:hover{
+  transition: .3s linear;
+  color: black;
+}
+
+.site-logo .navbar-brand .logo {
+  max-width: 100%; /* Ensure the image scales down but doesn’t exceed its container */
+  height: auto; /* Maintain aspect ratio */
+}
+.site-logo {
+  display: flex;
+  align-items: center; /* Center logo vertically if needed */
+  justify-content: center; /* Center logo horizontally if needed */
+}
+
+.site-logo .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.site-logo .navbar-brand .logo {
+  max-width: 100%; /* Make sure the logo scales within its container */
+  height: auto; /* Maintain aspect ratio */
+}
+.logo-text {
+  font-size: 4vw; /* Responsive font size based on viewport width */
+}
+
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 6vw; /* Larger font size for smaller screens */
+  }
+}
+
+footer{
+  margin-bottom: -2000px;
+}
+
+.sty1{
+  font-size: 20px;
+}
+
+.sty1:hover{
+  color: black;
+}
+
   </style>
 </head>
 
@@ -251,9 +391,10 @@
           </button>
           <div class="site-logo">
             <a class="navbar-brand" href="index.html">
-              <span class="logo-text logod">PLAY<span class="text-alt"><span class="two">2</span>C<img class="logo" src="PLAY 2 CODE.png" alt="">DE</span></span>
+              <span class="logo-text logod">PLAY<span class="text-alt"><span class="two">2</span><span class="code">CODE</span></span>
             </a>
           </div>
+          
         </div>
         
         <div class="docs-top-utilities d-flex justify-content-end align-items-center gap-3">
@@ -263,12 +404,11 @@
               <div id="results"></div>
             </form>
           </div>
-
-          <button type="button" class="btn-changelog btn btn-primary d-none d-lg-flex" data-bs-toggle="modal" data-bs-target="#changelogModal">
+          <button type="button" class="btn-login btn btn-primary d-none d-lg-flex" data-bs-toggle="modal" data-bs-target="#loginModal">
             Log In
           </button>
-          <button type="button" class="btn-changelog btn btn-primary d-none d-lg-flex" data-bs-toggle="modal" data-bs-target="#changelogModal">
-            Sign In
+          <button type="button" class="btn-signup btn btn-primary d-none d-lg-flex" data-bs-toggle="modal" data-bs-target="#signUpModal">
+            Sign Up
           </button>
         </div>
       </div>
@@ -286,10 +426,12 @@
         </form>
       </div>
       <nav id="docs-nav" class="docs-nav navbar">
-        <ul class="section-items list-unstyled nav flex-column pb-3">
-          <li class="nav-item section-title">
-            <a class="nav-link scrollto" href="#section-1">HTML</a>
-            <ul class="nav flex-column mt-2 lvl2">
+          <ul class="section-items list-unstyled nav flex-column pb-3">
+            
+            <!-- HTML Section -->
+            <li class="nav-item section-title" data-toggle="section">
+              <a class="nav-link scrollto sty" href="#section-1">HTML</a>
+              <ul class="nav flex-column mt-2 lvl2">
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#item-1-1">HTML Elements</a>
               </li>
@@ -350,8 +492,8 @@
             </ul>
           </li>
 
-          <li class="nav-item section-title">
-            <a class="nav-link scrollto" href="#section-2">CSS</a>
+          <li class="nav-item section-title" data-toggle="section">
+            <a class="nav-link scrollt sty" href="#section-2">CSS</a>
             <ul class="nav flex-column mt-2 lvl2">
                   <li class="nav-item section-child">
                     <a class="nav-link scrollto" href="#item-2-1">CSS Selectors</a>
@@ -396,7 +538,7 @@
                     <a class="nav-link scrollto" href="#item-2-1-13">CSS Text Properties</a>
                   </li>
                   <li class="nav-item section-child">
-                    <a class="nav-link scrollto" href="#item-2-1-14">CSS Borders<</a>
+                    <a class="nav-link scrollto" href="#item-2-1-14">CSS Borders</a>
                   </li>
                   <li class="nav-item section-child">
                     <a class="nav-link scrollto" href="#item-2-1-15">CSS Shadows</a>
@@ -414,8 +556,8 @@
               </li>
           </li>
 
-          <li class="nav-item section-title">
-            <a class="nav-link scrollto" href="#section-3">JavaScript</a>
+          <li class="nav-item section-title" data-toggle="section">
+            <a class="nav-link scrollto sty" href="#section-3">JavaScript</a>
             <ul class="nav flex-column mt-2 lvl2">
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#item-3-1">JavaScript Variables</a>
@@ -500,30 +642,51 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#item-3-28"> JavaScript Service Worker</a>
-              </li>
+              </li>  
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#item-3-29">JavaScript WebSockets</a>
               </li>
             </ul>
           </li>
 
-          <li class="nav-item section-title">
-            <a class="nav-link scrollto" href="#section-4">Python</a>
+          <li class="nav-item section-title" data-toggle="section">
+            <a class="nav-link scrollto sty" href="#section-4">Python</a>
             <ul class="nav flex-column mt-2 lvl2">
               <li class="nav-item">
-                <a class="nav-link scrollto" href="#item-4-1">Section Item 4.1</a>
+                <a class="nav-link scrollto" href="#item-4-1">Basic Data Types</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link scrollto" href="#item-4-2">Section Item 4.2</a>
+                <a class="nav-link scrollto" href="#item-4-2">Variables and Assignments</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link scrollto" href="#item-4-3">Section Item 4.3</a>
+                <a class="nav-link scrollto" href="#item-4-3">Operators</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#item-4-4">Control Structures</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#item-4-5">Functions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#item-4-6">OOP in Python</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#item-4-7"> Modules and Packages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#item-4-8">Exception Handling</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#item-4-9"> File Handling</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#item-4-10">Advanced Topic</a>
               </li>
             </ul>
           </li>
 
-          <li class="nav-item section-title">
-            <a class="nav-link scrollto" href="#section-9">FAQs</a>
+          <li class="nav-item section-title" data-toggle="section">
+            <a class="nav-link scrollto sty" href="#section-9">FAQs</a>
             <ul class="nav flex-column mt-2 lvl2">
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#item-9-1">Section Item 9.1</a>
@@ -535,6 +698,23 @@
                 <a class="nav-link scrollto" href="#item-9-3">Section Item 9.3</a>
               </li>
             </ul>
+          </li>
+
+          <li class="nav-item section-title" data-toggle="section">
+            <a class="nav-link scrollto sty1" href="compiler.html">P2C Compiler</a>
+          </li>
+
+          <li class="nav-item section-title" data-toggle="section">
+            <button type="button" class="btn-login btn btn-primary d-block d-lg-none" data-bs-toggle="modal" data-bs-target="#loginModal">
+              Log In
+            </button>
+          </li>
+          <li class="nav-item section-title" data-toggle="section">
+            <button type="button" class="btn-signup btn btn-primary d-block d-lg-none" data-bs-toggle="modal" data-bs-target="#signUpModal">
+              Sign Up
+            </button>
+          </li>
+          
           </li>
         </ul>
       </nav>
@@ -1720,217 +1900,342 @@ switch (day) {
 
         <article class="docs-article" id="section-4">
           <header class="docs-header">
-            <h1 class="docs-heading">Intergrations</h1>
+            <h1 class="docs-heading">Python</h1>
             <section class="docs-intro">
-              <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus
-                condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh
-                convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce
-                in malesuada odio.</p>
-            </section>
+              <p>Python is an interpreted, high-level programming language with dynamic typing and garbage collection. Created by Guido van Rossum and released in 1991, Python emphasizes code readability and simplicity. The language uses significant whitespace (indentation) to define code blocks, which enhances clarity. Python supports multiple programming paradigms such as procedural, object-oriented, and functional programming. It comes with a vast standard library, making it useful for everything from scripting and web development to data science and artificial intelligence. Due to its user-friendly syntax and cross-platform compatibility, Python is widely adopted for both beginner and professional developers.</p>
+              <pre><code>print("Hello, World!")</code></pre>
           </header>
 
 
           <section class="docs-section" id="item-4-1">
-            <h2 class="section-heading">Section Item 4.1</h2>
-            <p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-              Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-              imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-              porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin
-              est. Vestibulum ultricies malesuada tempor.</p>
-          </section>
+            <h2 class="section-heading">1. Basic Data Types</h2>
+  
+              <h3>1.1 Integers</h3>
+              <p>Integers are a built-in data type used to represent whole numbers, which can be either positive or negative. Python's integers have no size limits, meaning they can grow to accommodate very large values, constrained only by memory. This makes Python especially suited for applications requiring high-precision calculations, like scientific computing. Basic operations such as addition, subtraction, multiplication, and division work as expected with integers. Python also supports more advanced operations like exponentiation and modulo. You can convert other types (like strings or floats) to integers using the <code>int()</code> function.</p>
+              <pre><code>x = 10  # Integer
+  y = -5  # Negative Integer</code></pre>
+
+  <h3>1.2 Floats</h3>
+  <p>Floats represent real numbers in Python, typically those that have a decimal point. They are implemented using double-precision floating-point arithmetic, which allows for significant precision but may result in rounding errors for very small or large numbers. Python's float type is ideal for calculations involving real-world measurements, scientific calculations, and scenarios requiring precision. Basic arithmetic operations are supported, as well as more advanced mathematical functions from Python’s math library. You can convert strings or integers into floats using the <code>float()</code> function.</p>
+  <pre><code>x = 10.5  # Float
+y = -5.2  # Negative Float</code></pre>
+
+  <h3>1.3 Strings</h3>
+  <p>Strings in Python are sequences of characters and are one of the most commonly used data types. Strings are immutable, meaning their contents cannot be changed after creation. They can be enclosed in either single quotes, double quotes, or triple quotes for multi-line strings. Python provides many built-in methods for manipulating strings, such as finding substrings, replacing characters, or splitting and joining. String formatting is also a powerful feature, allowing for dynamic creation of strings by embedding variables. Concatenation is done using the <code>+</code> operator, and slicing allows for easy extraction of substrings.</p>
+  <pre><code>s = "Hello, Python"</code></pre>
+
+  <h3>1.4 Booleans</h3>
+  <p>Booleans in Python represent truth values: <code>True</code> or <code>False</code>. They are often used in control flow statements like <code>if</code> and loops. Booleans result from comparison operations, like <code>==</code> (equals) and <code>!=</code> (not equals). In Python, <code>True</code> and <code>False</code> are internally represented as integers 1 and 0, respectively, meaning you can use them in arithmetic operations if necessary. Python also has built-in functions, such as <code>bool()</code>, to evaluate any object’s truth value, where empty sequences or zero values evaluate as <code>False</code>.</p>
+  <pre><code>is_active = True
+is_admin = False</code></pre>
+
 
 
           <section class="docs-section" id="item-4-2">
-            <h2 class="section-heading">Section Item 4.2</h2>
-            <p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-              Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-              imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-              porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin
-              est. Vestibulum ultricies malesuada tempor.</p>
+            <h2 class="section-heading">2. Variables and Assignments</h2>
+            <p>Variables in Python are containers for storing data values. Unlike other languages, Python does not require an explicit declaration of the variable type; the type is inferred from the value assigned to the variable. Variables are assigned using the assignment operator <code>=</code>. Python is dynamically typed, meaning you can change the type of a variable by assigning it a new value of a different type at any time. Variable names are case-sensitive and should follow standard naming conventions. It's important to choose descriptive variable names to make code more readable and maintainable.</p>
+            <pre><code>name = "Alice"
+age = 25</code></pre>
+
           </section>
 
 
           <section class="docs-section" id="item-4-3">
-            <h2 class="section-heading">Section Item 4.3</h2>
-            <p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-              Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-              imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-              porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin
-              est. Vestibulum ultricies malesuada tempor.</p>
-          </section>
+            <h2 class="section-heading">3. Operators</h2>
 
-        </article>
-
-
-        <article class="docs-article" id="section-5">
-          <header class="docs-header">
-            <h1 class="docs-heading">Utilities</h1>
-            <section class="docs-intro">
-              <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus
-                condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh
-                convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce
-                in malesuada odio.</p>
-            </section>
-          </header>
-
-          <section class="docs-section" id="item-5-1">
-            <h2 class="section-heading">Section Item 5.1</h2>
-            <p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-              Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-              imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-              porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin
-              est. Vestibulum ultricies malesuada tempor.</p>
-          </section>
-
-
-          <section class="docs-section" id="item-5-2">
-            <h2 class="section-heading">Section Item 5.2</h2>
-            <p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-              Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-              imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-              porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin
-              est. Vestibulum ultricies malesuada tempor.</p>
-          </section>
-
-
-          <section class="docs-section" id="item-5-3">
-            <h2 class="section-heading">Section Item 5.3</h2>
-            <p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-              Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-              imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-              porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin
-              est. Vestibulum ultricies malesuada tempor.</p>
-          </section>
-
-        </article>
-
-
-        <article class="docs-article" id="section-6">
-          <header class="docs-header">
-            <h1 class="docs-heading">Web</h1>
-            <section class="docs-intro">
-              <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus
-                condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh
-                convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce
-                in malesuada odio.</p>
-            </section>
-          </header>
-
-          <section class="docs-section" id="item-6-1">
-            <h2 class="section-heading">Section Item 6.1</h2>
-            <p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-              Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-              imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-              porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin
-              est. Vestibulum ultricies malesuada tempor.</p>
+            <h3>3.1 Arithmetic Operators</h3>
+            <p>Python supports several arithmetic operators: <code>+</code> (addition), <code>-</code> (subtraction), <code>*</code> (multiplication), <code>/</code> (division), <code>%</code> (modulus), <code>**</code> (exponentiation), and <code>//</code> (floor division). These operators can be used on integers, floats, and even complex numbers. Python’s arithmetic operators follow the typical order of operations (PEMDAS—Parentheses, Exponents, Multiplication and Division, Addition and Subtraction). The modulus operator <code>%</code> returns the remainder from division, and floor division <code>//</code> discards the fractional part, returning only the quotient.</p>
+            <pre><code>a = 5
+            b = 2
+            result = a + b  # Addition
+            result = a - b  # Subtraction
+            result = a * b  # Multiplication
+            result = a / b  # Division
+            result = a % b  # Modulus
+            result = a ** b  # Exponentiation
+            result = a // b  # Floor Division</code></pre>
+            
+            <h3>3.2 Comparison Operators</h3>
+            <p>Comparison operators are used to compare two values and return a Boolean result. Python supports the following comparison operators: <code>==</code> (equal), <code>!=</code> (not equal), <code>&gt;</code> (greater than), <code>&lt;</code> (less than), <code>&gt;=</code> (greater than or equal to), and <code>&lt;=</code> (less than or equal to). These operators are frequently used in control structures like <code>if</code> statements or loops to perform decision-making based on comparisons. Python comparisons can be chained together (e.g., <code>1 &lt; x &lt; 10</code>), allowing for concise and readable comparisons.</p>
+            <pre><code>a = 5
+            b = 2
+            result = a == b  # Equal to
+            result = a != b  # Not equal to
+            result = a > b   # Greater than
+            result = a < b   # Less than
+            result = a >= b  # Greater than or equal to
+            result = a <= b  # Less than or equal to</code></pre>
+            
+            <h3>3.3 Logical Operators</h3>
+            <p>Python includes three logical operators: <code>and</code>, <code>or</code>, and <code>not</code>. These are used to combine multiple conditions and return a Boolean value. The <code>and</code> operator returns <code>True</code> only if both conditions are true. The <code>or</code> operator returns <code>True</code> if at least one of the conditions is true. The <code>not</code> operator is used to negate a condition, returning <code>True</code> if the condition is false, and vice versa. Logical operators are commonly used in decision-making, especially in combination with comparison operators for more complex conditional statements.</p>
+            <pre><code>x = True
+            y = False
+            result = x and y  # False
+            result = x or y   # True
+            result = not x    # False</code></pre>
+            
+            <h3>3.4 Assignment Operators</h3>
+            <p>Assignment operators are used to assign values to variables. In addition to the simple <code>=</code> assignment operator, Python supports several compound assignment operators that combine an operation with an assignment.</p>
+            <pre><code>a = 5
+            a += 2  # Add and assign
+            a -= 2  # Subtract and assign
+            a *= 2  # Multiply and assign
+            a /= 2  # Divide and assign
+            a %= 2  # Modulus and assign
+            a **= 2  # Exponent and assign
+            a //= 2  # Floor divide and assign</code></pre>
+            
+            <h3>3.5 Bitwise Operators</h3>
+            <p>Bitwise operators work on binary numbers at the bit level. These operators include AND, OR, XOR, NOT, and bit shifts.</p>
+            <pre><code>a = 5  # 101 in binary
+            b = 2  # 010 in binary
+            result = a & b  # Bitwise AND
+            result = a | b  # Bitwise OR
+            result = a ^ b  # Bitwise XOR
+            result = ~a     # Bitwise NOT
+            result = a << 1 # Left shift
+            result = a >> 1 # Right shift</code></pre>
+            
+            <h3>3.6 Identity Operators</h3>
+            <p>Identity operators compare the memory location of two objects: <code>is</code> and <code>is not</code>.</p>
+            <pre><code>a = [1, 2, 3]
+            b = a
+            result = a is b      # True, same object in memory
+            result = a is not b  # False</code></pre>
+            
+            <h3>3.7 Membership Operators</h3>
+            <p>Membership operators check if a value is present in a sequence, such as a list, tuple, or string: <code>in</code> and <code>not in</code>.</p>
+            <pre><code>a = [1, 2, 3]
+            result = 2 in a      # True
+            result = 4 not in a  # True</code></pre>
           </section>
 
 
-          <section class="docs-section" id="item-6-2">
-            <h2 class="section-heading">Section Item 6.2</h2>
-            <p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-              Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-              imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-              porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin
-              est. Vestibulum ultricies malesuada tempor.</p>
+          <section class="docs-section" id="item-4-4">
+            <h2 class="section-heading">4. Control Structures</h2>
+
+            <h3>4.1 if, else, elif</h3>
+            <p>Control structures allow for conditional execution of code based on certain conditions. The <code>if</code> statement checks if a condition is true and executes a block of code. If the condition is false, the optional <code>else</code> statement runs another block of code. The <code>elif</code> statement stands for "else if" and allows for multiple conditions to be checked in sequence. Python control structures are defined by indentation, making code easier to read. Combining <code>if</code>, <code>elif</code>, and <code>else</code> allows developers to handle different cases within a program.</p>
+            <pre><code>x = 10
+        if x > 5:
+            print("x is greater than 5")
+        elif x == 5:
+            print("x is equal to 5")
+        else:
+            print("x is less than 5")</code></pre>
+        
+            <h3>4.2 while loop</h3>
+            <p>The <code>while</code> loop allows repeated execution of a block of code as long as the condition remains true. The loop first checks the condition and executes the block of code if the condition is true, continuing to loop until the condition becomes false. Be careful when using <code>while</code> loops to avoid creating infinite loops by ensuring that the condition eventually becomes false. These loops are useful when the number of iterations is not known beforehand, but a specific condition needs to be met for the loop to terminate.</p>
+            <pre><code>count = 0
+        while count < 5:
+            print(count)
+            count += 1</code></pre>
+        
+            <h3>4.3 for loop</h3>
+            <p>A <code>for</code> loop in Python is used to iterate over a sequence (like a list, tuple, dictionary, or string). Unlike some other languages where loops are defined with conditions, Python's <code>for</code> loop iterates directly over the elements of a sequence, making the code more readable. The built-in <code>range()</code> function is often used with <code>for</code> loops when a numeric iteration is needed. Nested loops are supported in Python, but care should be taken when using them to ensure that the code remains efficient and readable.</p>
+            <pre><code>for i in range(5):
+            print(i)</code></pre>
+        
+            <h3>4.4 break and continue</h3>
+            <p>The <code>break</code> and <code>continue</code> statements are used to control the flow of loops. The <code>break</code> statement immediately terminates the loop, skipping any remaining code in the loop. The <code>continue</code> statement skips the current iteration and proceeds to the next iteration in the loop.</p>
+            <pre><code>for i in range(10):
+            if i == 5:
+                break
+            print(i)
+        
+        for i in range(10):
+            if i % 2 == 0:
+                continue
+            print(i)</code></pre>
+        
+            <h3>4.5 Nested Loops</h3>
+            <p>Nested loops allow one loop to be inside another. This is useful when dealing with multi-dimensional data structures, like lists of lists. Be cautious with performance, as nested loops can become computationally expensive if not managed carefully.</p>
+            <pre><code>for i in range(3):
+            for j in range(3):
+                print(f"i={i}, j={j}")</code></pre>
+        
+            <h3>4.6 pass Statement</h3>
+            <p>The <code>pass</code> statement is a null operation; it does nothing when executed. It is useful as a placeholder for code that you intend to implement later, but want the structure of the code to remain valid in the meantime.</p>
+            <pre><code>for i in range(5):
+            if i == 3:
+                pass  # Placeholder for future code
+            else:
+                print(i)</code></pre>
+
           </section>
 
 
-          <section class="docs-section" id="item-6-3">
-            <h2 class="section-heading">Section Item 6.3</h2>
-            <p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-              Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-              imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-              porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin
-              est. Vestibulum ultricies malesuada tempor.</p>
-          </section>
+          <section class="docs-section" id="item-4-5">
+            <h2 class="section-heading">5. Functions</h2>
 
-        </article>
+            <h3>5.1 Defining Functions</h3>
+            <p>Functions in Python are defined using the <code>def</code> keyword. A function is a reusable block of code that performs a specific task and can be called whenever needed. Functions can accept arguments (input data) and return values. They allow developers to organize code into smaller, manageable parts and avoid duplication. When defining a function, it’s important to choose a descriptive name and clearly document the purpose of its parameters and return value. Functions help in making code modular, reusable, and easier to maintain. Functions can also return multiple values as tuples, adding flexibility.</p>
+            <pre><code>def greet(name):
+    return f"Hello, {name}"
 
+print(greet("Alice"))</code></pre>
 
-        <article class="docs-article" id="section-7">
-          <header class="docs-header">
-            <h1 class="docs-heading">Mobile</h1>
-            <section class="docs-intro">
-              <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus
-                condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh
-                convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce
-                in malesuada odio.</p>
-            </section>
-          </header>
+            <h3>5.2 Lambda Functions</h3>
+            <p>Lambda functions in Python are anonymous, single-expression functions defined using the <code>lambda</code> keyword. They are often used for short, throwaway functions where a full function definition would be overkill. Lambda functions can take any number of arguments but have only one expression. The result of the expression is implicitly returned. They are commonly used in combination with higher-order functions like <code>map()</code>, <code>filter()</code>, or <code>sorted()</code> when you need a quick function without defining a full <code>def</code> function.</p>
+            <pre><code>square = lambda x: x ** 2
+print(square(4))</code></pre>
 
-
-          <section class="docs-section" id="item-7-1">
-            <h2 class="section-heading">Section Item 7.1</h2>
-            <p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-              Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-              imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-              porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin
-              est. Vestibulum ultricies malesuada tempor.</p>
           </section>
 
 
-          <section class="docs-section" id="item-7-2">
-            <h2 class="section-heading">Section Item 7.2</h2>
-            <p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-              Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-              imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-              porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin
-              est. Vestibulum ultricies malesuada tempor.</p>
+          <section class="docs-section" id="item-4-6">
+            <h2 class="section-heading">6. OOP in Python</h2>
+
+            <h3>6.1 Classes</h3>
+            <p>Classes are blueprints for creating objects. In Python, a class is defined using the <code>class</code> keyword. A class can contain methods (functions) and attributes (variables) that define the behavior and properties of the objects created from the class. Classes support features like inheritance and polymorphism, allowing you to build upon existing code. A class's constructor method, <code>_init_</code>, is used to initialize the object's attributes when it's created. Object-Oriented Programming (OOP) helps in organizing large codebases by bundling related data and functionality together.</p>
+            <pre><code>class Dog:
+    def _init_(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def bark(self):
+        return f"{self.name} says woof!"
+        
+dog1 = Dog("Buddy", 5)
+print(dog1.bark())</code></pre>
+
+            <h3>6.2 Inheritance</h3>
+            <p>Inheritance allows a class (child class) to inherit attributes and methods from another class (parent class). This promotes code reuse and a hierarchical relationship between classes. The child class can override or extend the functionalities of the parent class. In Python, inheritance is specified by passing the parent class as a parameter when defining the child class. Multiple inheritance is also supported, where a class can inherit from multiple parent classes. Inheritance allows you to build more complex structures based on simpler, reusable components.</p>
+            <pre><code>class Animal:
+    def speak(self):
+        return "Animal speaks"
+        
+class Dog(Animal):
+    def speak(self):
+        return "Dog barks"
+
+dog = Dog()
+print(dog.speak())  # Outputs: Dog barks</code></pre>
+
+            <h3>6.3 Encapsulation</h3>
+            <p>Encapsulation refers to the concept of bundling data (attributes) and methods that operate on the data into a single unit, i.e., a class, and restricting direct access to some of the object's components. Python uses underscores to denote private members. Single underscore (e.g., <code>name</code>) signifies a protected variable, while a double underscore (e.g., <code>_name</code>) makes it private to the class. This principle of hiding internal implementation details helps in controlling the way data is accessed or modified, thus improving security and modularity in code.</p>
+            <pre><code>class Person:
+    def _init_(self, name):
+        self.__name = name  # Private attribute
+    
+    def get_name(self):
+        return self.__name
+
+p = Person("Alice")
+print(p.get_name())</code></pre>
+
+            <h3>6.4 Polymorphism</h3>
+            <p>Polymorphism in Python allows objects of different classes to be treated as instances of the same class through method overriding. The same method can behave differently depending on the object it is called on. This is especially useful in functions that accept objects of different types but expect a common interface. Polymorphism ensures that different types can be handled in a uniform way. It supports the "write once, use anywhere" principle, reducing code duplication and enhancing flexibility.</p>
+            <pre><code>class Cat:
+    def speak(self):
+        return "Meow"
+
+class Dog:
+    def speak(self):
+        return "Bark"
+        
+def animal_sound(animal):
+    print(animal.speak())
+
+dog = Dog()
+cat = Cat()
+animal_sound(dog)  # Bark
+animal_sound(cat)  # Meow</code></pre>
+
           </section>
 
 
-          <section class="docs-section" id="item-7-3">
-            <h2 class="section-heading">Section Item 7.3</h2>
-            <p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-              Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-              imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-              porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin
-              est. Vestibulum ultricies malesuada tempor.</p>
-          </section>
 
-        </article>
+          <section class="docs-section" id="item-4-7">
+            <h2 class="section-heading">7. Modules and Packages</h2>
 
+            <h3>7.1 Creating and Importing Modules</h3>
+            <p>Modules in Python are files that contain Python code, typically a collection of functions, classes, and variables. A module can be imported into other Python files to reuse its functionalities. Python provides several built-in modules, such as <code>math</code> and <code>os</code>, but you can also create your own. To import a module, you use the <code>import</code> keyword. You can also import specific functions or classes using the <code>from</code> keyword. Grouping related modules together forms a package, making it easier to organize and maintain large projects.</p>
+            <pre><code># mymodule.py
+def greet(name):
+    return f"Hello, {name}"
 
-        <article class="docs-article" id="section-8">
-          <header class="docs-header">
-            <h1 class="docs-heading">Resources</h1>
-            <section class="docs-intro">
-              <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus
-                condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh
-                convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce
-                in malesuada odio.</p>
-            </section>
-          </header>
+# main.py
+import mymodule
+print(mymodule.greet("Alice"))</code></pre>
 
+            <h3>7.2 Using Packages</h3>
+            <p>A package is a collection of modules organized in directories that include a special <code>_init_.py</code> file. Packages allow hierarchical organization of module namespaces, preventing naming conflicts in large projects. You can import a package in the same way you import modules. Python's standard library contains many packages that provide a wide range of functionalities, from file handling to complex data structures. You can also install third-party packages using package managers like <code>pip</code>, which simplifies dependency management for your projects.</p>
+            <pre><code># Importing a module from a package
+from mypackage import mymodule</code></pre>
 
-          <section class="docs-section" id="item-8-1">
-            <h2 class="section-heading">Section Item 8.1</h2>
-            <p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-              Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-              imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-              porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin
-              est. Vestibulum ultricies malesuada tempor.</p>
           </section>
 
 
-          <section class="docs-section" id="item-8-2">
-            <h2 class="section-heading">Section Item 8.2</h2>
-            <p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-              Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-              imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-              porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin
-              est. Vestibulum ultricies malesuada tempor.</p>
+
+          <section class="docs-section" id="item-4-8">
+            <h2 class="section-heading">8. Exception Handling</h2>
+
+            <h3>8.1 try-except-finally</h3>
+            <p>Exception handling in Python is done using the <code>try-except-finally</code> block. The <code>try</code> block contains the code that might raise an exception. If an exception occurs, the program will jump to the <code>except</code> block. Python provides a variety of built-in exception types like <code>ValueError</code>, <code>TypeError</code>, and <code>ZeroDivisionError</code>, but custom exceptions can also be created. The <code>finally</code> block is executed no matter what, making it useful for cleaning up resources like closing files or network connections, even if an error occurs.</p>
+            <pre><code>try:
+    x = 1 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+finally:
+    print("Execution completed")</code></pre>
+
           </section>
 
 
-          <section class="docs-section" id="item-8-3">
-            <h2 class="section-heading">Section Item 8.3</h2>
-            <p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-              Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-              imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-              porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin
-              est. Vestibulum ultricies malesuada tempor.</p>
+
+          <section class="docs-section" id="item-4-9">
+            <h2 class="section-heading">9. File Handling</h2>
+
+            <h3>9.1 Reading and Writing Files</h3>
+            <p>File handling in Python is performed using the built-in <code>open()</code> function. It allows you to read, write, and append to files. The file is automatically closed when you use the <code>with</code> statement, ensuring that resources are properly released even if an error occurs. Modes like <code>'r'</code> (read), <code>'w'</code> (write), and <code>'a'</code> (append) specify how the file is accessed. Python also supports handling different file types such as text, binary, and CSV files. Proper file handling ensures that your data is efficiently managed and safely stored.</p>
+            <pre><code># Writing to a file
+with open('example.txt', 'w') as file:
+    file.write("Hello, World!")
+
+# Reading from a file
+with open('example.txt', 'r') as file:
+    content = file.read()
+    print(content)</code></pre>
+
+          </section>
+
+
+
+          <section class="docs-section" id="item-4-10">
+            <h2 class="section-heading">10. Advanced Topics</h2>
+
+            <h3>10.1 Decorators</h3>
+            <p>Decorators in Python are a powerful tool that allows you to modify the behavior of a function or method without permanently altering it. A decorator is a function that wraps another function, adding additional functionality. They are widely used in Python frameworks, especially in web development. For example, in Flask, decorators are used to handle routes. A common use of decorators is for logging, validation, or access control. Python's <code>@decorator</code> syntax makes it easy to apply decorators to functions.</p>
+            <pre><code>def my_decorator(func):
+    def wrapper():
+        print("Before the function call")
+        func()
+        print("After the function call")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()</code></pre>
+
+            <h3>10.2 Generators</h3>
+            <p>Generators are special functions that return an iterator and allow lazy evaluation. Instead of returning all the values at once, a generator yields values one at a time, which is particularly useful for handling large datasets or streams of data. Generators are defined using the <code>yield</code> keyword instead of <code>return</code>. Each call to the generator's <code>_next_()</code> method returns the next value in the sequence. Using generators reduces memory usage and increases efficiency when dealing with large or infinite sequences.</p>
+            <pre><code>def count_up_to(n):
+    count = 1
+    while count <= n:
+        yield count
+        count += 1
+
+counter = count_up_to(5)
+for num in counter:
+    print(num)</code></pre>
+
+            <h3>10.3 Context Managers</h3>
+            <p>Context managers in Python are used to manage resources like file streams or database connections efficiently. The most common way to use a context manager is through the <code>with</code> statement, which ensures that the resource is properly acquired and released. The <code>_enter</code> and <code>exit_</code> methods define the behavior of the context manager. By using context managers, you can make your code cleaner, more readable, and less prone to resource leaks or unexpected errors.</p>
+            <pre><code>with open("example.txt", "w") as file:
+    file.write("Hello, World!")  # File automatically closes after this block</code></pre>
           </section>
 
         </article>
@@ -1940,118 +2245,163 @@ switch (day) {
           <header class="docs-header">
             <h1 class="docs-heading">FAQs</h1>
             <section class="docs-intro">
-              <p>Section intro goes here. You can list all your FAQs using the format below.</p>
+                <p>The FAQ section is a comprehensive guide designed to address common questions users may have while using the platform. It is divided into three categories: **General FAQs**, **Installation & Setup FAQs**, and **Usage FAQs**.
+
+                  In the **General FAQs**, users can find information on getting started with the platform, such as how to create an account, log in, and set up their first project. This section also covers where to find release notes, system requirements for different operating systems, and how to report bugs or issues. Users are directed to support forums or community spaces for additional help.
+                  
+                  The **Installation & Setup FAQs** focus on the technical aspects of getting the software installed and running. It provides detailed steps for installing the software on various platforms, troubleshooting installation errors, and setting up the platform in a development environment. The section also explains how to upgrade to the latest version and configure settings for proper functionality.
+                  
+                  The **Usage FAQs** provide guidance on how to use the platform’s features, including command-line interface (CLI) commands, key features of the platform, and integration of third-party tools. It also directs users to API documentation for those looking to work with the platform's APIs.</p>
             </section>
-          </header>
-
-
-          <section class="docs-section" id="item-9-1">
-            <h2 class="section-heading">Section Item 9.1
-              <small>(FAQ Category One)</small>
-            </h2>
+        </header>
+        
+        <!-- General FAQs -->
+        <section class="docs-section" id="item-9-1">
+            <h2 class="section-heading">General FAQs</h2>
+        
             <h5 class="pt-3">
-              <i class="fas fa-question-circle me-1"></i>What's sit amet quam eget lacinia?
+                <i class="fas fa-question-circle me-1"></i>How do I get started with the platform?
             </h5>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-              ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
-              fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
-              justo. Nullam dictum felis eu pede mollis pretium.</p>
-            <h5 class="pt-3">
-              <i class="fas fa-question-circle me-1"></i>How to ipsum dolor sit amet quam tortor?
-            </h5>
-            <p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis
-              gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis
-              sed, nonummy id, metus. Nullam accumsan lorem in dui.
+            <p>
+                To get started, first create an account by clicking on the "Sign Up" button at the top-right corner of the homepage. 
+                Once registered, you can log in and set up your first project by following the setup wizard. The process typically involves 
+                adding your project details and configuring initial settings. For a more detailed guide, visit the "Getting Started" section of our documentation.
             </p>
+        
             <h5 class="pt-3">
-              <i class="fas fa-question-circle me-1"></i>Can I bibendum sodales?
+                <i class="fas fa-question-circle me-1"></i>Where can I find the latest release notes?
             </h5>
-            <p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.
-              Nullam accumsan lorem in dui.
+            <p>
+                You can access the latest release notes by navigating to the "Release Notes" section under the "Help" or "Support" tab in the main menu. 
+                This section provides details on new features, bug fixes, and changes in the latest and previous versions.
             </p>
+        
             <h5 class="pt-3">
-              <i class="fas fa-question-circle me-1"></i>Where arcu sed urna gravida?
+                <i class="fas fa-question-circle me-1"></i>What are the system requirements?
             </h5>
-            <p>Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam libero, et elementum diam mollis ac.
-              In dignissim aliquam est eget ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus
-              sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida lobortis. Donec lectus est,
-              imperdiet eu viverra viverra, ultricies nec urna.
+            <p>
+                The platform supports Windows, macOS, and Linux. For optimal performance, we recommend a minimum of 8GB of RAM, 
+                20GB of free disk space, and a dual-core processor. Ensure that you have the latest versions of your browser 
+                and any necessary dependencies installed for the best experience.
             </p>
-          </section>
-
-
-          <section class="docs-section" id="item-9-2">
-            <h2 class="section-heading">Section Item 9.2
-              <small>(FAQ Category Two)</small>
-            </h2>
+        
             <h5 class="pt-3">
-              <i class="fas fa-question-circle me-1"></i>What's sit amet quam eget lacinia?
+                <i class="fas fa-question-circle me-1"></i>How can I report a bug or issue?
             </h5>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-              ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
-              fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
-              justo. Nullam dictum felis eu pede mollis pretium.</p>
-            <h5 class="pt-3">
-              <i class="fas fa-question-circle me-1"></i>How to ipsum dolor sit amet quam tortor?
-            </h5>
-            <p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis
-              gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis
-              sed, nonummy id, metus. Nullam accumsan lorem in dui.
+            <p>
+                To report a bug, go to the "Support" section of our website and click on "Submit a Ticket." Provide a detailed description 
+                of the issue, including steps to reproduce it, and any relevant screenshots. Alternatively, you can submit issues directly 
+                through our GitHub repository by opening a new issue.
             </p>
+        
             <h5 class="pt-3">
-              <i class="fas fa-question-circle me-1"></i>Can I bibendum sodales?
+                <i class="fas fa-question-circle me-1"></i>Is there a user community or support forum?
             </h5>
-            <p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.
-              Nullam accumsan lorem in dui.
+            <p>
+                Yes, we have a user community where you can ask questions, share tips, and interact with other users. Visit the "Community Forum" 
+                section on our website to join the discussion or search for answers. The forum is monitored by our team as well as experienced users.
             </p>
+        </section>
+        
+        <!-- Installation & Setup FAQs -->
+        <section class="docs-section" id="item-9-2">
+            <h2 class="section-heading">Installation & Setup FAQs</h2>
+        
             <h5 class="pt-3">
-              <i class="fas fa-question-circle me-1"></i>Where arcu sed urna gravida?
+                <i class="fas fa-question-circle me-1"></i>How do I install the software?
             </h5>
-            <p>Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam libero, et elementum diam mollis ac.
-              In dignissim aliquam est eget ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus
-              sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida lobortis. Donec lectus est,
-              imperdiet eu viverra viverra, ultricies nec urna.
+            <p>
+                You can install the software by downloading the installer from our website. We offer installers for Windows, macOS, and Linux. 
+                Follow the installation wizard for your respective platform. After the installation completes, ensure that all necessary dependencies 
+                (like Node.js or Python) are correctly installed. Refer to the "Installation Guide" section for more detailed steps.
             </p>
-          </section>
-
-
-          <section class="docs-section" id="item-9-3">
-            <h2 class="section-heading">Section Item 9.3
-              <small>(FAQ Category Three)</small>
-            </h2>
+        
             <h5 class="pt-3">
-              <i class="fas fa-question-circle me-1"></i>How to dapibus sollicitudin justo vel fermentum?
+                <i class="fas fa-question-circle me-1"></i>What should I do if I encounter installation errors?
             </h5>
-            <p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis
-              gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis
-              sed, nonummy id, metus. Nullam accumsan lorem in dui.
+            <p>
+                If you encounter errors during installation, check the error log for details. Common issues include missing dependencies, 
+                file permissions, or conflicting software. Refer to our troubleshooting guide in the documentation for solutions to common problems. 
+                If the issue persists, contact support or search for answers in the community forum.
             </p>
+        
             <h5 class="pt-3">
-              <i class="fas fa-question-circle me-1"></i>How long bibendum sodales?
+                <i class="fas fa-question-circle me-1"></i>Can I set up the platform in a development environment?
             </h5>
-            <p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.
-              Nullam accumsan lorem in dui.
+            <p>
+                Yes, you can set up the platform in a development environment by cloning the repository from our GitHub page. 
+                Follow the development setup instructions in the README file, which include setting up environment variables, 
+                installing dependencies, and running the platform locally using a tool like Docker or Vagrant. 
             </p>
+        
             <h5 class="pt-3">
-              <i class="fas fa-question-circle me-1"></i>Where dapibus sollicitudin?
+                <i class="fas fa-question-circle me-1"></i>What configuration settings are needed?
             </h5>
-            <p>Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam libero, et elementum diam mollis ac.
-              In dignissim aliquam est eget ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus
-              sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida lobortis. Donec lectus est,
-              imperdiet eu viverra viverra, ultricies nec urna.
+            <p>
+                After installation, you’ll need to configure a few files, such as your environment variables, database settings, and API keys. 
+                These configurations are stored in a `.env` file or other configuration files, depending on the system. 
+                Refer to the "Configuration Guide" in the documentation for specific details.
             </p>
-          </section>
+        
+            <h5 class="pt-3">
+                <i class="fas fa-question-circle me-1"></i>How do I upgrade to the latest version?
+            </h5>
+            <p>
+                To upgrade to the latest version, navigate to the "Updates" section of the platform's settings. 
+                Click "Check for Updates" and follow the prompts to download and install the latest version. 
+                If you're using a self-hosted version, pull the latest version from the GitHub repository and follow the upgrade instructions.
+            </p>
+        </section>
+        
+        <!-- Usage FAQs -->
+        <section class="docs-section" id="item-9-3">
+            <h2 class="section-heading">Usage FAQs</h2>
+        
+            <h5 class="pt-3">
+                <i class="fas fa-question-circle me-1"></i>How do I use the command-line interface (CLI)?
+            </h5>
+            <p>
+                The CLI allows users to interact with the platform programmatically. Once the CLI is installed, you can run various commands such as 
+                <code>init</code>, <code>build</code>, and <code>deploy</code>. These commands automate tasks such as project creation, building assets, 
+                and deploying projects to a server. For a full list of commands and their options, refer to the "CLI Commands" section in the documentation.
+            </p>
+        
+            <h5 class="pt-3">
+                <i class="fas fa-question-circle me-1"></i>What are the key features of the platform?
+            </h5>
+            <p>
+                Our platform includes several key features such as real-time collaboration, API integration, automated testing, and robust version control. 
+                These features allow for seamless development and deployment workflows. Each feature is well-documented in the "Features" section, 
+                where you can find tutorials and examples on how to use them effectively.
+            </p>
+        
+            <h5 class="pt-3">
+                <i class="fas fa-question-circle me-1"></i>Can I integrate third-party tools?
+            </h5>
+            <p>
+                Yes, the platform supports integrations with various third-party tools like Slack, GitHub, and AWS. 
+                To integrate a tool, visit the "Integrations" section in your project settings and follow the setup guide provided for each tool. 
+                Most integrations require you to input API keys or access tokens to connect your accounts securely.
+            </p>
+        
+            <h5 class="pt-3">
+                <i class="fas fa-question-circle me-1"></i>Where can I find API documentation?
+            </h5>
+            <p>
+                The API documentation is available under the "API Docs" section. It contains details on all available endpoints, 
+                including request and response formats, parameters, authentication methods, and usage examples. You can also try 
+                out API calls using our interactive API explorer.
+            </p>
+        </section>
+        
 
         </article>
 
         <footer class="footer">
           <div class="container text-center py-5">
-            <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-            <small class="copyright">Designed with ❤️ by
-              <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a>
-              for developers <br><br> Modified with 🔥 by <a class="theme-link" href="https://github.com/joelthorner" target="_blank">joelthorner</a> for developers</small>
+            <small class="copyright">Back-End ❤️ by
+              <a class="theme-link" href="https://www.instagram.com/krish_sharma_264/" target="_blank">Manoj Singh</a>
+              for Full Stack developer<br> and Design 🔥 by <a class="theme-link" href="https://www.instagram.com/krish_sharma_264/" target="_blank">Ronit Sharma</a> Front-End developer</small>
           </div>
         </footer>
       </div>
@@ -2060,43 +2410,90 @@ switch (day) {
   <!--docs-wrapper-->
 
   <!-- Modal -->
-  <div class="modal fade" id="changelogModal" tabindex="-1" aria-labelledby="changelogModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title px-3 py-1" id="changelogModalLabel">Changelog</h4>
-            <button type="button" class="btn-close p-4" data-bs-dismiss="modal" aria-label="Close">
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-12">
-                  <h6 class="mt-3"> <span class="p-2"> Version 1.0.0</span> - 29/06/2021</h6>
-                  <ul class="mt-3 mb-5">
-                    <li class="ms-3">Lorem ipsum dolor sit amet</li>
-                    <li class="ms-3">Lorem ipsum dolor sit amet</li>
-                    <ul>
-                      <li class="ms-3">Lorem ipsum dolor sit amet</li>
-                      <li class="ms-3">Lorem ipsum dolor sit amet</li>
-                      <li class="ms-3">Lorem ipsum dolor sit amet</li>
-                    </ul>
-                    <li class="ms-3">Lorem ipsum dolor sit amet</li>
-                  </ul>
-                </div>
-                <!--end col-->
-              </div>
-              <!--end row-->
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Log In to Your Account</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+          <!-- Login Form -->
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email or Username</label>
+              <input type="text" class="form-control" id="loginEmail" placeholder="Enter your email or username" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password" required>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="loginRememberMe">
+              <label class="form-check-label" for="loginRememberMe">Remember me</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Log In</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signUpModalLabel">Sign Up for an Account</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Sign Up Form -->
+          <form>
+            <div class="mb-3">
+              <label for="signupEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="signupEmail" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="signupUsername" class="form-label">Username</label>
+              <input type="text" class="form-control" id="signupUsername" placeholder="Choose a username" required>
+            </div>
+            <div class="mb-3">
+              <label for="signupPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="signupPassword" placeholder="Create a password" required>
+            </div>
+            <div class="mb-3">
+              <label for="signupConfirmPassword" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="signupConfirmPassword" placeholder="Confirm your password" required>
+            </div>
+            <div class="mb-3 text-center">
+              <p class="text-muted">Already have an account? <a href="#loginModal" data-bs-toggle="modal" data-bs-target="#loginModal">Log in here</a>.</p>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Sign Up</button>
+        </div>
+      </div>
     </div>
   </div>
 
 
+  <script>
+    // JavaScript to toggle visibility
+    document.querySelectorAll('[data-toggle="section"]').forEach(function(sectionTitle) {
+        sectionTitle.addEventListener('click', function() {
+            const subMenu = this.querySelector('.lvl2');
+            if (subMenu.style.display === 'block') {
+                subMenu.style.display = 'none';
+            } else {
+                subMenu.style.display = 'block';
+            }
+        });
+    });
+</script>
   <script>
     /*!
      * Bootstrap v5.2.1 (https://getbootstrap.com/)
