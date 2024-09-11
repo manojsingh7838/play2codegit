@@ -122,7 +122,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 CORS_ALLOWED_ORIGINS = [
-    'https://play2code.xyz','https://www.play2code.xyz'
+    'https://play2code.xyz','https://www.play2code.xyz',
 ]
 
 # Default primary key field type
