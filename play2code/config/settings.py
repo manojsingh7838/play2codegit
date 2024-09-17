@@ -42,16 +42,24 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'compiler',
     'course',
+    'accounts',
+    'home',
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+
+]
+# settings.py
+AUTHENTICATION_BACKENDS = [
+    "accounts.backends.CustomBackend",  
+    "django.contrib.auth.backends.ModelBackend", 
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -121,6 +129,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+    "/var/www/static/",
+]
 CORS_ALLOWED_ORIGINS = [
     'https://play2code.xyz','https://www.play2code.xyz',
 ]
@@ -129,3 +141,22 @@ CORS_ALLOWED_ORIGINS = [
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.office365.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "play2code@outlook.com"
+EMAIL_HOST_PASSWORD = "itnhgrkddzjjcsny"
+DEFAULT_FROM_EMAIL = "play2code@outlook.com"
+
+
+class MyCustomMiddleware:
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        response = self.get_response(request)
+        return response
+AUTH_USER_MODEL = "accounts.CustomUser"
