@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% comment %} <link rel="shortcut icon" href="images/PLAY 2 CODE.png"> {% endcomment %}
+    <title>OTP Verification</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(31, 67, 93);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .otp-box {
+            background: #f9f9f9;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+            width: 360px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .otp-box h2 { margin-bottom: 30px; color: #333; font-size: 28px; font-weight: 700; }
+        .textbox input {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        .btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #4a90e2;
+            border: none;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .btn:hover { background-color: #357abd; }
+    </style>
+</head>
+<body>
+    <div class="otp-box">
+        <h2>Verify OTP</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn">Verify OTP</button>
+        </form>
+        {% if error %}
+        <p style="color: red;">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/PLAY 2 CODE.png">
+    <title>Sign Up</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(31, 67, 93); /* Dark background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .fade-out {
+            opacity: 0;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .logo a {
+            text-decoration: none;
+            font-size: 2rem;
+            color: #ffffff;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo .two {
+            color: red;
+            font-weight: 800;
+            font-size: 2.5rem;
+        }
+
+        .signup-box {
+            background: #f9f9f9;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            border: 1px solid #e1e1e1;
+        }
+
+        .signup-box h2 {
+            margin-bottom: 1.5rem;
+            color: #333;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .textbox {
+            margin-bottom: 0.75rem; /* Reduce spacing between input fields */
+        }
+
+        .textbox input {
+            width: 100%;
+            padding: 0.8rem; /* Reduce input padding */
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .textbox input:focus {
+            border-color: #4a90e2;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            outline: none;
+        }
+
+        .error-message {
+            color: red; /* Error text in red */
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 1rem;
+            background-color: #4a90e2;
+            border: none;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #357abd;
+            transform: scale(1.02);
+        }
+
+        .btn:disabled {
+            background-color: #a1a1a1;
+            cursor: not-allowed;
+        }
+
+        .links {
+            margin-top: 1.5rem;
+        }
+
+        .links a {
+            text-decoration: none;
+            font-size: 1rem;
+            display: block;
+            margin: 0.5rem 0;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .signup-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            z-index: -1;
+            transform: scale(1.05);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px; /* Reduced padding */
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            margin-bottom: 15px; /* Reduced margin */
+        }
+
+        .form-control:focus {
+            border-color: #4a90e2;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            outline: none;
+        }
+        ul{
+            display:none
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <a href="index.html">
+            PLAY<span class="two">2</span><span>CODE</span>
+        </a>
+    </div>
+    <div class="signup-box fade-in">
+        <h2>Sign Up</h2>
+        <form method="post" id="signupForm">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="error-message">
+                {% if form.errors %}
+                    {% for field in form %}
+                        {% if field.errors %}
+                            {{ field.label }}: {{ field.errors|striptags }}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <button type="submit" id="signupButton" class="btn">Sign Up</button>
+        </form>
+        <div class="links">
+            <a href="login.html">Already have an account? <span class="sign">Log in</span></a>
+        </div>
+    </div>
+
+    <script>
+        // Client-side validation
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            let formValid = true;
+            // Add more validation logic here if needed
+
+            if (!formValid) {
+                event.preventDefault(); // Stop form submission if invalid
+            }
+        });
+    </script>
+</body>
+</html>
