@@ -142,7 +142,7 @@ def login_view(request):
                     auth_login(request, user)
 
                     return redirect(
-                        "http://127.0.0.1:8000/"
+                        "play2code.xyz"
                     )  # Make sure 'home' is a valid URL pattern
                 else:
                     messages.error(request, "Your account is inactive.")
