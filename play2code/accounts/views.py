@@ -88,7 +88,7 @@ def otp_verification_view(request):
 
                     logger.info("OTP verified successfully.")
                     print("OTP verified successfully.")
-                    return render("login.html")
+                    return redirect(request,"account/login")
                 except Exception as e:
                     logger.error(f"Error while verifying OTP or activating user: {e}")
                     return render(
