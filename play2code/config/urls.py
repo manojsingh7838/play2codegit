@@ -8,5 +8,6 @@ urlpatterns = [
     path("compiler/",include("compiler.urls")),
     path("account/",include("accounts.urls")),
     path("",include("home.urls")),
+    path("ai/",include("p2cAI.urls")),
     
 ]
