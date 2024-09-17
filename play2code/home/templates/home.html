@@ -1,0 +1,1348 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Krypto-Etox">
+  <link rel="shortcut icon" href="static/images/PLAY 2 CODE.png">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="static/fonts/icomoon/style.css">
+  <link rel="stylesheet" href="static/fonts/feather/style.css">
+  <link rel="stylesheet" href="static/fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="static/css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="static/css/aos.css">
+  <link rel="stylesheet" href="static/css/style.css">
+
+  <title>PLAY2CODE | Home</title>
+</head>
+<style>
+  .modal-header {
+    border-bottom: none;
+    padding-bottom: 1.5rem;
+  }
+
+  .modal-title {
+    font-weight: 600;
+    color: #343a40;
+  }
+
+  .modal-body {
+    padding: 2rem;
+  }
+
+  .form-label {
+    font-weight: 500;
+    color: #495057;
+  }
+
+  .form-control {
+    border-radius: 0.5rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-color: #ced4da;
+    font-size: 1rem;
+  }
+
+  .form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+  }
+
+  .form-check-label {
+    font-size: 0.875rem;
+    color: #6c757d;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+  .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+  }
+
+  .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+
+  .modal-footer {
+    border-top: none;
+    padding-top: 1rem;
+  }
+  .clo{
+    color: goldenrod;
+  }
+
+  .basic-box {
+    border: 1px solid #5f482d; /* Light brown border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    background: #fff; /* White background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .basic-box:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  .basic-box h3 {
+    color: #6f4f28; /* Dark brown for text */
+    font-weight: bold;
+  }
+  
+  .basic-box .price {
+    font-size: 1.5rem; /* Medium-large price text */
+    color: #6f4f28; /* Dark brown for price */
+  }
+  
+  .basic-box .btn-primary {
+    background-color: #8c5e3c; /* Medium brown button */
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .basic-box .btn-primary:hover {
+    background-color: #6f4f28; /* Darker brown on hover */
+  }
+  
+
+  .silver-box {
+    border: 2px solid #918787; /* Light silver border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    background: #f9f9f9; /* Very light grey background for a silver feel */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .silver-box.active {
+    border: 2px solid #948d8d; /* Slightly darker silver border for active state */
+  }
+  
+  .silver-box:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  .silver-box h3 {
+    color: #555; /* Medium grey for text */
+    font-weight: bold;
+  }
+  
+  .silver-box .price {
+    font-size: 1.5rem; /* Medium-large price text */
+    color: #555; /* Medium grey for price */
+  }
+  
+  .silver-box .btn-primary {
+    background-color: #928282; /* Silver button */
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .silver-box .btn-primary:hover {
+    background-color: #9e9e9e; /* Darker silver on hover */
+  }
+  
+.sil{
+  color: #b0b0b0;
+}
+
+  .premium-box {
+    border: 2px solid #f39c12; /* Gold border for premium look */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px;
+    background: #fff; /* White background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .premium-box:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  }
+  
+  .premium-box .clo {
+    color: #f39c12; /* Gold color for premium branding */
+    font-weight: bold;
+  }
+  
+  .premium-box .price {
+    font-size: 2rem; /* Larger price text */
+  }
+  
+  .premium-box .btn-primary {
+    background-color: #f39c12; /* Gold button */
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .premium-box .btn-primary:hover {
+    background-color: #e67e22; /* Slightly darker gold on hover */
+  }
+
+  .sign-up-form {
+    margin: 20px;
+}
+
+.form-control {
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.5); 
+  justify-content: center; 
+  align-items: center; 
+}
+.modal-content {
+  background-color: #fff; 
+  margin: 5% auto; 
+  padding: 20px; 
+  border: 1px solid #ddd; 
+  width: 90%; 
+  max-width: 400px; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.close-button {
+  color: #aaa; 
+  float: right; 
+  font-size: 24px; 
+  font-weight: bold;
+  cursor: pointer;
+}
+.close-button:hover,
+.close-button:focus {
+  color: #333; 
+  text-decoration: none;
+}
+/* Form Elements */
+.form-control {
+  width: calc(100% - 24px); 
+  padding: 12px; 
+  margin: 8px 0; 
+  border: 1px solid #ccc; 
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.remember-me {
+  margin: 8px 0;
+}
+/* Button Styles */
+.btn {
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.btn-primary {
+  background-color: #007bff; 
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+.btn-secondary {
+  background-color: #6c757d; 
+  color: #fff;
+}
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+/* Button Container */
+.action-buttons {
+  display: flex; 
+  justify-content: flex-end; 
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Popup Wrapper styles */
+.popup-wrapper {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+}
+
+/* Popup Box styles */
+.popup-box {
+  background-color: #ffffff;
+  margin: 10% auto; /* Centered */
+  padding: 20px;
+  border: 1px solid #ddd;
+  width: 90%;
+  max-width: 400px; /* Max width for larger screens */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  position: relative; /* Relative positioning for close button */
+}
+
+/* Close Button styles */
+.close-btn {
+  color: #666;
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Popup Title styles */
+.popup-title {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Form styles */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Includes padding in the element's total width and height */
+}
+
+.submit-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Sign-up Redirect styles */
+.signup-redirect {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.signup-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+
+/* Section Styles */
+#blog-section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section-description {
+  font-size: 18px;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Blog Entry Styles */
+.blog-entry {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.blog-entry:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.blog-image {
+  display: block;
+}
+
+.blog-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.blog-entry:hover .blog-image img {
+  transform: scale(1.1);
+}
+
+.blog-content {
+  position: relative;
+}
+
+.blog-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.blog-title a {
+  color: #333;
+  text-decoration: none;
+}
+
+.blog-title a:hover {
+  text-decoration: underline;
+}
+
+.blog-date {
+  display: block;
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 15px;
+}
+
+.blog-excerpt {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.blog-more a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.blog-more a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section-title {
+      font-size: 30px;
+  }
+
+  .section-description {
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+      font-size: 24px;
+  }
+
+  .section-description {
+      font-size: 14px;
+  }
+}
+
+
+
+.premium-footer {
+  background: #f8f9fa;
+  padding: 40px 0;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+.footer-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.footer-text {
+  font-size: 1rem;
+  color: #555;
+}
+.social a {
+  color: #777;
+  font-size: 1.4rem;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+.social a:hover {
+  color: #007bff;
+}
+.contact-widget { 
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.premium-form .form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+.floating-label input, .floating-label textarea {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 12px 15px;
+  width: 100%;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.floating-label input:focus, .floating-label textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.floating-label label {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  font-size: 0.9rem;
+  color: #999;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+.floating-label input:focus + label, .floating-label input:not(:placeholder-shown) + label,
+.floating-label textarea:focus + label, .floating-label textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 0.75rem;
+  color: #007bff;
+}
+.premium-button {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  transition: background 0.3s ease;
+}
+.premium-button:hover {
+  background: #0056b3;
+}
+.copyright p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Existing Styles */
+.contact-widget {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+.form-control {
+  border: none;
+  border-bottom: 2px solid #ddd;
+  border-radius: 0;
+  padding: 12px 15px;
+  background: none;
+}
+.form-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #666;
+  letter-spacing: 0.5px;
+}
+.form-group.floating-label {
+  position: relative;
+}
+.form-group.floating-label label {
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  font-size: 12px;
+  background: #fff;
+  padding: 0 5px;
+  color: #999;
+  transition: all 0.2s ease-in-out;
+}
+.form-group .form-control:focus + label {
+  color: #007bff;
+}
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+.premium-button {
+  transition: background-color 0.3s ease;
+}
+.premium-button:hover {
+  background-color: #0056b3;
+}
+
+
+footer {
+  background-color: #f8f9fa; /* Light grey background */
+  color: #333; /* Darker text for contrast */
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 100%; /* Ensure full-width responsiveness */
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Ensure proper padding and text sizing on smaller screens */
+@media (max-width: 768px) {
+  footer {
+    padding: 15px 0;
+  }
+  
+  footer p {
+    font-size: 0.85rem;
+  }
+}
+
+
+</style>
+<body>
+
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close">
+          <span class="icofont-close js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+    <div class="container">
+
+
+      <nav class="site-nav">
+        <div class="logo">
+          <a href="index.html" class="text-white"><span class="logo-text logod">PLAY<span class="text-alt"><span class="two">2</span><span class="code">CODE</span></span></span></a>
+        </div>
+        <div class="row align-items-center">
+          
+          
+          <div class="col-12 col-sm-12 col-lg-12 site-navigation text-center">
+            <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu">
+              <li class="active"><a href="https://play2code.xyz">Home</a></li>
+              <li class="has-children">
+                <a href="#docs">Documantation</a>
+                <ul class="dropdown">
+                  <li><a href="https://play2code.xyz/#section-1" target="_blank">HTML</a></li>
+                  <li><a href="https://play2code.xyz/#section-2" target="_blank">CSS</a></li>
+                  <li><a href="https://play2code.xyz/#section-3" target="_blank">JavaScript</a></li>
+                  <li><a href="https://play2code.xyz/#section-4" target="_blank">Python</a></li>
+                  <li><a href="https://play2code.xyz/#section-5" target="_blank">C</a></li>
+                  <li><a href="https://play2code.xyz/#section-6" target="_blank">C++</a></li>
+                  <li><a href="https://play2code.xyz/#section-7" target="_blank">Django</a></li>
+                  <li><a href="https://play2code.xyz/#section-8" target="_blank">Java</a></li>
+                  <li><a href="https://play2code.xyz/#section-9" target="_blank">DBMS</a></li>
+                </ul>
+              </li>
+              <li><a href="#ai">AI</a></li>
+              <li><a href="http://127.0.0.1:8000/freelance">FreeLancing</a></li>
+                <li class="has-children">
+                  <a href="#courses">Courses</a>
+                  <ul class="dropdown">
+                    <li><a href="https://play2code.xyz/#section-1" target="_blank">Beginner Courses</a></li>
+                    <li><a href="https://play2code.xyz/#section-2" target="_blank">Advanced Courses</a></li>
+                    <li><a href="https://play2code.xyz/#section-3" target="_blank">Primium Courses</a></li>
+                  </ul>
+                </li>
+              <li><a href="#high">About us</a></li>
+            </ul>
+
+
+{% if user.is_authenticated %}
+    <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right menu-absolute">
+        <li class="cta-button" style="color: #007bff;">
+            <i class="fas fa-user-circle fa-2x"></i> {{ user.username }}
+        </li>
+        <li class="cta-button">
+            <a href="{% url 'logout' %}">Log Out</a>
+        </li>
+    </ul>
+{% else %}
+    <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right menu-absolute">
+        <li class="cta-button"><a id="loginBtn" href="{% url 'login' %}">Log In</a></li>
+    </ul>
+{% endif %}
+      
+
+            <a href="#" class="burger light ml-auto site-menu-toggle js-menu-toggle d-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
+              <span></span>
+            </a>
+
+          </div>
+
+        </div>  
+      </nav> <!-- END nav -->
+
+    </div> <!-- END container -->
+
+
+    <div class="hero-slant overlay" data-stellar-background-ratio="0.5" style="background-image: url('static/images/mbg.jpg')">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-lg-7 intro">
+            <h1 class="text-white font-weight-bold mb-4" data-aos="fade-up" data-aos-delay="0">
+              Empowering Future Coders to Build Tomorrow’s Digital World
+            </h1>
+            <p class="text-white mb-4" data-aos="fade-up" data-aos-delay="100">
+              We don’t just build products; we create digital journeys that redefine boundaries and inspire innovation.
+            </p>
+            
+            <form action="#" class="sign-up-form d-flex" id="signUpForm" data-aos="fade-up" data-aos-delay="200">
+              <input type="text" id="emailInput" class="form-control" placeholder="Enter email address">
+              <input type="submit" class="btn btn-primary" value="Sign Up">
+          </form>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="slant" style="background-image: url('static/images/slant.svg');"></div>
+    </div>
+        
+            
+      </div>
+      
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    
+     <div class="site-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center"  data-aos="fade-up">
+            <h2 class="heading font-weight-bold mb-3" id="docs">Documantation on <span class="logo-text logod">PLAY<span class="text-alt"><span class="two">2</span><span class="code">CODE</span></h2>
+          </div>
+        </div>
+<div class="row align-items-stretch">
+  <!-- HTML Section -->
+  <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+    <div class="unit-4 d-flex">
+      <div class="unit-4-icon mr-4">
+        <i class="fab fa-html5" style="font-size: 48px;"></i> <!-- HTML Icon -->
+      </div>
+      <div>
+        <h3>HTML</h3>
+        <p>HTML (HyperText Markup Language) is the standard language for creating web pages and web applications.</p>
+        <p><a href="https://play2code.xyz/#section-1" target="blank_">Learn More</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CSS Section -->
+  <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+    <div class="unit-4 d-flex">
+      <div class="unit-4-icon mr-4">
+        <i class="fab fa-css3-alt" style="font-size: 48px;"></i> <!-- CSS Icon -->
+      </div>
+      <div>
+        <h3>CSS</h3>
+        <p>CSS (Cascading Style Sheets) is used to style and layout web pages, including design elements like colors, fonts, and spacing.</p>
+        <p><a href="https://play2code.xyz/#section-2" target="blank_">Learn More</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Section -->
+  <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+    <div class="unit-4 d-flex">
+      <div class="unit-4-icon mr-4">
+        <i class="fab fa-js" style="font-size: 48px;"></i> <!-- JavaScript Icon -->
+      </div>
+      <div>
+        <h3>JavaScript</h3>
+        <p>JavaScript is a versatile programming language commonly used to add interactivity to web pages.</p>
+        <p><a href="https://play2code.xyz/#section-3" target="blank_">Learn More</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Python Section -->
+  <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="300">
+    <div class="unit-4 d-flex">
+      <div class="unit-4-icon mr-4">
+        <i class="fab fa-python" style="font-size: 48px;"></i> <!-- Python Icon -->
+      </div>
+      <div>
+        <h3>Python</h3>
+        <p>Python is a high-level, general-purpose programming language known for its readability and versatility in web development, AI, and more.</p>
+        <p><a href="https://play2code.xyz/#section-4" target="blank_">Learn More</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- C Language Section -->
+  <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="400">
+    <div class="unit-4 d-flex">
+      <div class="unit-4-icon mr-4">
+        <i class="fas fa-code" style="font-size: 48px;"></i> <!-- C Language Icon -->
+      </div>
+      <div>
+        <h3>C Language</h3>
+        <p>C is a powerful low-level programming language often used for system programming and embedded systems.</p>
+        <p><a href="https://play2code.xyz/#section-5" target="blank_">Learn More</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- C++ Section -->
+  <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
+    <div class="unit-4 d-flex">
+      <div class="unit-4-icon mr-4">
+        <i class="fab fa-cuttlefish" style="font-size: 48px;"></i> <!-- C++ Icon -->
+      </div>
+      <div>
+        <h3>C++</h3>
+        <p>C++ is an extension of C with object-oriented programming features, widely used in game development and high-performance applications.</p>
+        <p><a href="https://play2code.xyz/#section-6" target="blank_">Learn More</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Django Section -->
+<div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="600">
+  <div class="unit-4 d-flex">
+      <div class="unit-4-icon mr-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: rgb(160, 150, 150);">
+          <path d="M 11 3 L 11 8.1582031 C 10.653 8.0172031 9.9041562 8 9.5351562 8 C 6.7591563 8 4.1894531 9.306 4.1894531 13 C 4.1894531 17.42 7.67 18 10 18 C 10.92 18 13 17.909141 14 17.619141 L 14 3 L 11 3 z M 16 3 L 16 6 L 19 6 L 19 3 L 16 3 z M 16 8 L 16 16.701172 C 16 18.217172 15.078 19.795172 13 20.701172 L 15.859375 21.996094 C 18.765375 20.996094 19 17.701172 19 16.701172 L 19 8 L 16 8 z M 9.9707031 10.550781 C 10.290703 10.550781 10.65 10.609453 11 10.689453 L 11 15.392578 C 10.65 15.472578 10.290703 15.533203 9.9707031 15.533203 C 8.6607031 15.533203 7.390625 15.12 7.390625 13 C 7.390625 10.88 8.6607031 10.550781 9.9707031 10.550781 z"></path>
+        </svg>
+        
+      </div>
+      <div>
+          <h3>Django</h3>
+          <p>Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.</p>
+          <p><a href="https://play2code.xyz/#section-7" target="blank_">Learn More</a></p>
+      </div>
+  </div>
+</div>
+
+<!-- Java Section -->
+<div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="700">
+  <div class="unit-4 d-flex">
+      <div class="unit-4-icon mr-4">
+          <i class="fab fa-java" style="font-size: 48px;"></i> <!-- Java Icon -->
+      </div>
+      <div>
+          <h3>Java</h3>
+          <p>Java is a widely-used programming language designed to have as few implementation dependencies as possible, making it a popular choice for cross-platform applications.</p>
+          <p><a href="https://play2code.xyz/#section-8" target="blank_">Learn More</a></p>
+      </div>
+  </div>
+</div>
+
+<!-- DBMS Section -->
+<div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="800">
+  <div class="unit-4 d-flex">
+      <div class="unit-4-icon mr-4">
+          <i class="fas fa-database" style="font-size: 48px;"></i> <!-- DBMS Icon -->
+      </div>
+      <div>
+          <h3>DBMS</h3>
+          <p>A Database Management System (DBMS) is software that manages databases, providing mechanisms to store, retrieve, and manipulate data.</p>
+          <p><a href="https://play2code.xyz/#section-9" target="blank_">Learn More</a></p>
+      </div>
+  </div>
+</div>
+
+</div>
+
+        
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="site-section overlay site-cover-2" id="ai" style="background-image: url('static/images/ai.jpg')">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 mx-auto text-center">
+            <h2 class="text-white mb-4">Feel Free to Ask AI :)</h2>
+            <p class="mb-0"><a href="contact.html" rel="noopener" class="btn btn-primary">Talk Now</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="features-lg ">
+      <div class="container">
+        <div class="row feature align-items-center justify-content-between">
+          <div class="col-lg-7 section-stack order-lg-2 mb-4 mb-lg-0 position-relative" data-aos="fade-up" data-aos-delay="0">
+
+            <div class="image-stack">
+              <div class="image-stack__item image-stack__item--top">
+                <img src="static/images\ai2.jpeg" alt="">
+              </div>
+              <div class="image-stack__item image-stack__item--bottom">
+                <img src="static/images\ai1.jpg" alt="">
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-4 section-title" data-aos="fade-up" data-aos-delay="100">
+            
+            <h2 class="font-weight-bold mb-4 heading">Aritfical Intelligent</h2>
+            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live.</p>
+            <p><a href="#" class="btn btn-primary">Get Started</a></p>
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="features-lg">
+      <div class="container">
+        
+        <div class="row feature align-items-center justify-content-between">
+          <div class="col-lg-7 mb-4 mb-lg-0 section-stack" data-aos="fade-up" data-aos-delay="0">
+            <img src="https://how2freelance.com/wp-content/uploads/2019/01/freelancing-online.jpg" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-lg-4 section-title" data-aos="fade-up" data-aos-delay="100">
+            
+            <h2 class="font-weight-bold mb-4">We Are FreeLancers</h2>
+            <p class="mb-6">Beyond the horizons of ordinary projects, far from the commonplace solutions, our team embarked on a dynamic coding adventure. In lands where complex challenges dwell, we crafted innovative, tailored solutions. Separated from the ordinary, we wove efficient, high-quality code that drives success.</p>
+            <p><a href="#connect" class="btn btn-primary">Contact us</a></p>
+
+          </div>
+          
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="pricing-section"  id="courses">
+      <div class="container">
+        <div class="section-title text-center mb-5" data-aos="fade-up" data-aos-delay="0">
+          <h2 class="heading font-weight-bold mb-5">Courses on <span class="logo-text logod">PLAY<span class="text-alt"><span class="two">2</span><span class="code">CODE</span></h2>
+
+        </div>
+        
+
+        <div class="row">
+          <!-- Basic Courses -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+              <div class="pricing-item basic-box">
+                  <h3>Basic Courses</h3>
+                  <div class="description">
+                      <p>Introduction to core topics with essential knowledge for beginners.</p>
+                  </div>
+                  <div class="period-change mb-4 d-block">
+                      <div class="price-wrap">
+                          <div class="price">
+                              <div>
+                                  <div>$1499</div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="d-inline-flex align-items-center text-center period-wrap">
+                          <div class="d-inline-block mr-1">Basic</div>
+                          <div class="d-block text-left period">
+                              <div>
+                                  <div>Starting</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <ul class="list-unstyled mb-4">
+                      <li class="d-flex"><span class="feather-check-square mr-2 mt-1"></span><span>Fundamentals</span></li>
+                      <li class="d-flex"><span class="feather-check-square mr-2 mt-1"></span><span>Structured Learning</span></li>
+                      <li class="d-flex"><span class="feather-check-square mr-2 mt-1"></span><span>Interactive Materials</span></li>
+                      <li class="d-flex"><span class="feather-check-square mr-2 mt-1"></span><span>Basic Support</span></li>
+                  </ul>
+                  <div>
+                      <a href="course.html" class="btn btn-primary">Show Courses</a>
+                  </div>
+              </div>
+          </div>
+      
+          <!-- Advanced Courses -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="pricing-item silver-box">
+                  <h3 class="sil">Advanced Courses</h3>
+                  <div class="description">
+                      <p>Deep dive into complex topics with detailed insights and expert guidance.</p>
+                  </div>
+                  <div class="period-change mb-4 d-block">
+                      <div class="price-wrap">
+                          <div class="price">
+                              <div>
+                                  <div class="sil">$49</div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="d-inline-flex align-items-center text-center period-wrap">
+                          <div class="d-inline-block mr-1">Per</div>
+                          <div class="d-block text-left period">
+                              <div>
+                                  <div>Month</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <ul class="list-unstyled mb-4">
+                      <li class="d-flex"><span class="feather-check-square mr-2 mt-1"></span><span>In-Depth Topics</span></li>
+                      <li class="d-flex"><span class="feather-check-square mr-2 mt-1"></span><span>Expert Guidance</span></li>
+                      <li class="d-flex"><span class="feather-check-square mr-2 mt-1"></span><span>Extended Resources</span></li>
+                      <li class="d-flex"><span class="feather-check-square mr-2 mt-1"></span><span>Monthly Updates</span></li>
+                  </ul>
+                  <div>
+                      <a href="course.html" class="btn btn-primary">Show Courses</a>
+                  </div>
+              </div>
+          </div>
+      
+          <!-- Premium Courses -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="pricing-item premium-box">
+                  <h3 class="clo">Premium Courses</h3>
+                  <div class="description">
+                      <p>Comprehensive plan with exclusive content and personalized mentoring.</p>
+                  </div>
+                  <div class="period-change mb-4 d-block">
+                      <div class="price-wrap">
+                          <div class="price">
+                              <div>
+                                  <div class="clo">$99</div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="d-inline-flex align-items-center text-center period-wrap">
+                          <div class="d-inline-block mr-1">Per</div>
+                          <div class="d-block text-left period">
+                              <div>
+                                  <div>Month</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <ul class="list-unstyled mb-4">
+                      <li class="d-flex"><span class="feather-check-square mr-2 mt-1"></span><span>Comprehensive</span></li>
+                      <li class="d-flex"><span class="feather-check-square mr-2 mt-1"></span><span>Exclusive Resources</span></li>
+                      <li class="d-flex"><span class="feather-check-square mr-2 mt-1"></span><span>One-on-One Mentoring</span></li>
+                      <li class="d-flex"><span class="feather-check-square mr-2 mt-1"></span><span>Certification</span></li>
+                  </ul>
+                  <div>
+                      <a href="course.html" class="btn btn-primary">Show Courses</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      </div>
+    </div>
+
+    
+
+    <div class="site-section bg-light" id="blog-section" >
+      <div class="container" id="high">
+          <div class="row">
+              <div class="col-12 text-center mb-5">
+                  <h2 class="section-title lg">HIGHLIGHTS OF <span class="logo-text logod">PLAY<span class="text-alt"><span class="two">2</span><span class="code">CODE</span></span></span></h2>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-6 col-lg-4 mb-4 mb-lg-5">
+                  <div class="blog-entry">
+                      <a href="#" class="blog-image">
+                          <img src="static/images/fL.jpg" alt="Blog Post Image" class="img-fluid">
+                      </a>
+                      <div class="blog-content p-4 bg-white">
+                          <h3 class="blog-title"><a href="#">We Are FreeLancer</a></h3>
+                          <span class="blog-date">April 25, 2019</span>
+                          <p class="blog-excerpt">Our team completed a dynamic coding freelancing project, delivering innovative solutions tailored to client needs. We tackled complex challenges and created efficient, high-quality code that drives success.</p>
+
+                          <p class="blog-more"><a href="freelance.html">Continue</a></p>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="col-md-6 col-lg-4 mb-4 mb-lg-5">
+                  <div class="blog-entry">
+                      <a href="#" class="blog-image">
+                          <img src="static/images/c.jpg" alt="Blog Post Image" class="img-fluid">
+                      </a>
+                      <div class="blog-content p-4 bg-white">
+                          <h3 class="blog-title"><a href="#">We have Best Courses</a></h3>
+                          <span class="blog-date">April 25, 2019</span>
+                          <p class="blog-excerpt">Your team offers high-quality courses through the website. These courses are taught by your experienced team members, providing valuable education and support to learners.</p>
+                          <p class="blog-more"><a href="course.html">Continue </a></p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 mb-4 mb-lg-5">
+                  <div class="blog-entry">
+                      <a href="#" class="blog-image">
+                          <img src="static\images/CC.jpg" alt="Blog Post Image" class="img-fluid">
+                      </a>
+                      <div class="blog-content p-4 bg-white">
+                          <h3 class="blog-title"><a href="#">Own Coding Compiler</a></h3>
+                          <span class="blog-date">April 25, 2019</span>
+                          <p class="blog-excerpt"> Your website features a custom-built coding compiler, which is designed to facilitate coding directly on the platform. This tool aims to provide users with a seamless coding experience.</p>
+                          <p class="blog-more"><a href="P2Cdocs/compiler.html" target="_blank">Continue </a></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+  
+
+  <div class="site-footer premium-footer">
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
+        
+        <!-- About Us Section -->
+        <div class="col-lg-4 about-section">
+          <div class="widget">
+            <h3 class="footer-heading">About Us</h3>
+            <p class="footer-text">
+              Welcome to our platform, a hub for aspiring professionals and learners. We offer a range of services:
+            </p>
+            <ul class="about-list">
+              <li>🌟 High-quality courses in various domains to help you grow your skills.</li>
+              <li>📄 Advanced documentation and compilers for easy student learnimg.</li>
+              <li>🤖 AI-driven tools designed to streamline your workflow and boost productivity.</li>
+              <li>💼 Freelancing opportunities, connecting you with clients and projects worldwide.</li>
+            </ul>
+          </div>
+  
+          <!-- Social Media Links -->
+          <div class="widget">
+            <h3 class="footer-heading">Connect with us</h3>
+            <ul class="social list-inline">
+              <li class="list-inline-item"><a href="#" target="_blank"><span class="icon-facebook"></span></a></li>
+              <li class="list-inline-item"><a href="#" target="_blank"><span class="icon-twitter"></span></a></li>
+              <li class="list-inline-item"><a href="https://www.instagram.com/play2code/" target="_blank"><span class="icon-instagram"></span></a></li>
+              <li class="list-inline-item"><a href="#" target="_blank"><span class="icon-linkedin"></span></a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Contact Us Form Section -->
+        <div class="col-lg-6">
+          <div class="widget contact-widget">
+            <h3 class="footer-heading text-uppercase" id="connect">Get In Touch</h3>
+            <form action="#" method="post" class="contact-form premium-form">
+              <div class="form-group floating-label mb-4">
+                <input type="text" class="form-control" id="name" placeholder=" " required>
+                <label for="name" class="form-label">Your Name</label>
+              </div>
+              <div class="form-group floating-label mb-4">
+                <input type="email" class="form-control" id="email" placeholder=" " required>
+                <label for="email" class="form-label">Your Email</label>
+              </div>
+              <div class="form-group floating-label mb-4">
+                <input type="text" class="form-control" id="phone" placeholder=" " required>
+                <label for="phone" class="form-label">Phone Number</label>
+              </div>
+              <div class="form-group floating-label mb-4">
+                <input type="text" class="form-control" id="subject" placeholder=" " required>
+                <label for="subject" class="form-label">Subject</label>
+              </div>
+              <div class="form-group floating-label mb-4">
+                <textarea class="form-control" id="message" rows="4" placeholder=" " required></textarea>
+                <label for="message" class="form-label">Message</label>
+              </div>
+              <div class="form-group mb-4">
+                <button type="submit" class="btn btn-primary btn-block premium-button text-uppercase" style="letter-spacing: 1px;">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+        <!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy;<script>document.write(new Date().getFullYear());</script> All Rights Reserved.</p>
+    <p>Designed by <a href="https://github.com/manojsingh7838" target="_blank">Manoj</a> & 
+       <a href="https://github.com/RonitSharma705" target="_blank">Ronit</a></p>
+  </div>
+</footer>
+
+
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
+
+<script>
+  document.getElementById('signUpForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    var email = document.getElementById('emailInput').value;
+    
+    if (email === '') {
+        alert('Please fill in your email address.');
+        return;
+    }
+    
+    // Redirect to signup page with email pre-filled
+    var signupPageURL = 'signup.html?email=' + encodeURIComponent(email);
+    window.location.href = signupPageURL;
+});
+</script>
+
+
+    <script src="static/js/jquery-3.5.1.min.js"></script>
+    <script src="static/js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/owl.carousel.min.js"></script>
+    <script src="static/js/aos.js"></script>
+    <script src="static/js/imagesloaded.pkgd.js"></script>
+    <script src="static/js/isotope.pkgd.min.js"></script>
+    <script src="static/js/jquery.animateNumber.min.js"></script>
+    <script src="static/js/jquery.stellar.min.js"></script>
+    <script src="static/js/jquery.waypoints.min.js"></script>
+    <script src="static/js/jquery.fancybox.min.js"></script>
+    <script src="static/js/custom.js"></script>
+
+    
+  </body>
+  </html>
