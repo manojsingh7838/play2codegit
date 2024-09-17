@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'course',
     'accounts',
     'home',
+    'p2cAI'
 ]
 
 MIDDLEWARE = [
