@@ -11,8 +11,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #121212; /* Dark background */
-            color: #e1e1e1; /* Light text */
+            background-color: #121212;
+            color: #e1e1e1;
             display: flex;
             flex-direction: column;
             height: 100vh;
@@ -23,7 +23,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            background-color: #1e1e1e; /* Slightly lighter dark background */
+            background-color: #1e1e1e;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             padding: 10px;
@@ -37,7 +37,6 @@
             text-align: center;
         }
 
-        /* Chat Bubble Styling */
         .chat-container {
             flex: 1;
             overflow-y: auto;
@@ -63,9 +62,19 @@
         }
 
         .ai-response {
-            background-color: #262d31;
+            background-color: #2a2f32; /* Dark background for AI response */
             color: white;
             margin-left: 10px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        pre {
+            background-color: #1e1e1e; /* Background for code blocks */
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap; /* Ensures long lines wrap correctly */
         }
 
         .api-name {
@@ -75,7 +84,6 @@
             color: #e1e1e1;
         }
 
-        /* Input Box Styling */
         .input-container {
             display: flex;
             align-items: center;
@@ -115,6 +123,21 @@
             background-color: #075e54;
         }
 
+        .copy-button {
+            background-color: #128c7e; /* Copy button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .copy-button:hover {
+            background-color: #075e54; /* Darker on hover */
+        }
+
         /* Scroll Bar for Chat Container */
         .chat-container::-webkit-scrollbar {
             width: 5px;
@@ -132,52 +155,81 @@
 </head>
 <body>
     <div class="form-container">
-        <h1>Ask to <span style:{color:red}> Play2Code</span> AI</h1>
-
-        <!-- Chat Bubbles -->
+        <h1>Ask to <span style="color:red">Play2Code</span> AI</h1>
         <div id="chat-container" class="chat-container"></div>
-
-        <!-- Input Section -->
         <div class="input-container">
             <textarea id="question" name="question" rows="1" placeholder="Type your message..."></textarea>
             <button id="send-button">➤</button>
         </div>
-
         <div class="api-name">API: Play2Code AI</div>
     </div>
 
-    <script>
-        $(document).ready(function() {
-            $('#send-button').on('click', function(event) {
-                event.preventDefault();
+<script>
+    $(document).ready(function() {
+        $('#send-button').on('click', function(event) {
+            event.preventDefault();
 
-                let userQuestion = $('#question').val();
-                if (userQuestion.trim() === '') return; // Don't send empty messages
+            let userQuestion = $('#question').val();
+            if (userQuestion.trim() === '') return;
 
-                // Append user's question as chat bubble
-                $('#chat-container').append('<div class="user-message">' + userQuestion + '</div>');
-                $('#question').val(''); // Clear the input field
+            $('#chat-container').append('<div class="user-message">' + userQuestion + '</div>');
+            $('#question').val('');
 
-                // Scroll to the bottom
-                $('#chat-container').scrollTop($('#chat-container')[0].scrollHeight);
+            $('#chat-container').scrollTop($('#chat-container')[0].scrollHeight);
 
-                $.ajax({
-                    type: 'POST',
-                    url: '{% url "ask_question" %}',
-                    data: { 'question': userQuestion, 'csrfmiddlewaretoken': '{{ csrf_token }}' },
-                    success: function(response) {
-                        // Append AI response as chat bubble
-                        $('#chat-container').append('<div class="ai-response">' + response.response + '</div>');
-                        // Scroll to the bottom
-                        $('#chat-container').scrollTop($('#chat-container')[0].scrollHeight);
-                    },
-                    error: function(xhr) {
-                        // Append error as response bubble
-                        $('#chat-container').append('<div class="ai-response">An error occurred: ' + xhr.responseText + '</div>');
+            $.ajax({
+                type: 'POST',
+                url: '{% url "ask_question" %}',
+                data: { 'question': userQuestion, 'csrfmiddlewaretoken': '{{ csrf_token }}' },
+                success: function(response) {
+                    let formattedResponse = response.response
+                        .replace(/\n/g, "<br>")
+                        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+                        .replace(/__(.*?)__/g, "<em>$1</em>");
+
+                    let codeBlocks = formattedResponse.match(/```(.*?)```/gs);
+                    
+                    if (codeBlocks) {
+                        formattedResponse = formattedResponse.replace(/```(.*?)```/gs, "");
+                        $('#chat-container').append('<div class="ai-response">' + formattedResponse + '</div>');
+                        
+                        codeBlocks.forEach(function(block) {
+                            let codeContent = block.replace(/```/g, "").trim();
+                            $('#chat-container').append(`
+                                <div class="ai-response">
+                                    <pre><code>${codeContent}</code></pre>
+                                    <button class="copy-button">Copy</button>
+                                </div>
+                            `);
+                        });
+                    } else {
+                        $('#chat-container').append('<div class="ai-response">' + formattedResponse + '</div>');
                     }
-                });
+
+                    $('#chat-container').scrollTop($('#chat-container')[0].scrollHeight);
+                },
+                error: function(xhr) {
+                    $('#chat-container').append('<div class="ai-response">An error occurred: ' + xhr.responseText + '</div>');
+                }
             });
         });
-    </script>
+
+        $(document).on('click', '.copy-button', function() {
+            let codeBlock = $(this).siblings('pre').find('code').text();
+            let $button = $(this);
+            navigator.clipboard.writeText(codeBlock).then(function() {
+                $button.text('Copied');
+                setTimeout(() => {
+                    $button.text('Copy');
+                }, 2000);
+            }).catch(function(error) {
+                alert('Failed to copy: ' + error);
+            });
+        });
+    });
+</script>
+
 </body>
 </html>
+
+
