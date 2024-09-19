@@ -9,5 +9,6 @@ urlpatterns = [
     path("account/",include("accounts.urls")),
     path("",include("home.urls")),
     path("ai/",include("p2cAI.urls")),
+    path("payment/",include("payment.urls")),
     
 ]
