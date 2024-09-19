@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device=device-width, initial-scale=1.0">
+    <title>DATA SCIENCE COURSE | PAYMENT</title>
+    <link rel="shortcut icon" href="../images/PLAY 2 CODE.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: rgb(31, 71, 99);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 900px;
+            width: 100%;
+            gap: 20px;
+            box-sizing: border-box;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .qr-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-right: 2px solid #ddd;
+            transition: border-color 0.3s;
+        }
+
+        .qr-section:hover {
+            border-color: #007bff;
+        }
+
+        .qr-code {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .qr-code:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .scan-message {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+            font-weight: bold;
+            border-top: 2px solid #ddd;
+            padding-top: 10px;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        .form-section {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        h1:hover {
+            color: #007bff;
+        }
+
+        .payment-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .payment-form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+            transition: color 0.3s;
+        }
+
+        .payment-form input {
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .payment-form input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+            outline: none;
+        }
+
+        .payment-form button {
+            padding: 12px;
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .payment-form button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .qr-section {
+                border-right: none;
+                border-bottom: 2px solid #ddd;
+                padding: 10px;
+            }
+
+            .qr-code {
+                max-width: 150px;
+            }
+
+            .scan-message {
+                font-size: 14px;
+                padding-top: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .qr-code {
+                max-width: 120px;
+            }
+
+            .scan-message {
+                font-size: 12px;
+                padding-top: 6px;
+            }
+
+            .payment-form input, .payment-form button {
+                font-size: 14px;
+            }
+
+            .payment-form label {
+                font-size: 14px;
+            }
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo a {
+            text-decoration: none;
+            font-size: 35px;
+            color: #ffffff;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo .logo-text {
+            color: #ffffff;
+            margin-right: 5px;
+        }
+
+        .logo .text-alt .two {
+            color: red;
+            font-weight: 800;
+            font-size: 38px;
+        }
+
+        .logo .code {
+            font-weight: 100;
+            font-size: 35px;
+        }
+
+        @media (max-width: 768px) {
+            .logo a {
+                font-size: 28px;
+            }
+
+            .logo .text-alt .two {
+                font-size: 32px;
+            }
+
+            .logo .code {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo a {
+                font-size: 23px;
+            }
+
+            .logo .text-alt .two {
+                font-size: 25px;
+            }
+
+            .logo .code {
+                font-size: 23px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <a href="../course.html" class="text-white">
+            <span class="logo-text">PLAY<span class="text-alt"><span class="two">2</span><span class="code">CODE</span></span></span>
+        </a>
+    </div>
+    <div class="container">
+        <div class="qr-section">
+            <img src="{% static 'images/9999.jpg'  %}" alt="QR Code" class="qr-code">
+            <div class="scan-message">Scan and Pay, then fill out the form below</div>
+        </div>
+        <div class="form-section">
+            <h1>Data Science Course</h1>
+            <form class="payment-form" action="{% url 'data_science_payment' %}" method="post">
+                {% csrf_token %}
+                <label for="course-name">Course Name:</label>
+                <input type="text" id="course-name" name="course-name" required minlength="2" maxlength="50" pattern="[A-Za-z ]+" title="Course Name must contain only letters and spaces." placeholder="Enter the course name" value="Data Science Course" readonly>
+                
+                <label for="transaction-id">Transaction ID:</label>
+                <input type="text" id="transaction-id" name="transaction-id" required minlength="10" maxlength="20" pattern="\d+" title="Transaction ID must be between 10 and 20 digits." placeholder="Enter your transaction ID">
+                
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required minlength="2" maxlength="50" pattern="[A-Za-z ]+" title="Name must contain only letters and spaces." placeholder="Enter your name">
+                
+                <label for="account-holder">Account Holder Name:</label>
+                <input type="text" id="account-holder" name="account-holder" required minlength="2" maxlength="50" pattern="[A-Za-z ]+" title="Account Holder must contain only letters and spaces." placeholder="Enter account holder name">
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
