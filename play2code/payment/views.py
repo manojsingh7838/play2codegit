@@ -136,7 +136,7 @@ def full_stack_payment(request):
 
         return redirect("success")
 
-    return render(request, "full_stack/payment_form.html")
+    return render(request, "FSD.html")
 
 
 @login_required(login_url="/account/login/")
@@ -167,7 +167,7 @@ def front_end_payment(request):
 
         return redirect("success")
 
-    return render(request, "full_stack/front_end_payment_form.html")
+    return render(request, "FED.html")
 
 
 @login_required(login_url="/account/login/")
@@ -198,7 +198,7 @@ def back_end_payment(request):
 
         return redirect("success")
 
-    return render(request, "full_stack/back_end_payment_form.html")
+    return render(request, "BD.html")
 
 
 @login_required(login_url="/account/login/")
@@ -229,7 +229,7 @@ def cc_payment(request):
 
         return redirect("success")
 
-    return render(request, "full_stack/cc_payment_form.html")
+    return render(request, "C.html")
 
 
 @login_required(login_url="/account/login/")
@@ -260,7 +260,7 @@ def data_analytics_payment(request):
 
         return redirect("success")
 
-    return render(request, "full_stack/data_analytics_payment_form.html")
+    return render(request, "DA.html")
 
 
 @login_required(login_url="/account/login/")
@@ -291,4 +291,4 @@ def data_science_payment(request):
 
         return redirect("success")
 
-    return render(request, "full_stack/data_science_payment_form.html")
+    return render(request, "DS.html")
