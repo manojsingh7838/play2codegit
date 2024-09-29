@@ -5322,11 +5322,10 @@ UPDATE accounts SET balance = balance + 100 WHERE account_id = 2;
 
     var hasLogin = getCookie('login');
 
-    if (window.location.origin.indexOf('file') !== -1) {
+    if (window.location.origin.indexOf('file') == "") {
       document.body.classList.add("access-guaranted");
     } else {
       if (hasLogin.length == 0) {
-        var sign = prompt("Access password:");
         if (loginSuccess(sign)) {
           document.body.classList.add("access-guaranted");
           setCookie('login', 'true', 1);
