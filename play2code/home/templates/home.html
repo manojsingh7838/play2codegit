@@ -823,10 +823,12 @@ footer a:hover {
               We don’t just build products; we create digital journeys that redefine boundaries and inspire innovation.
             </p>
             
+            {% if not user.is_authenticated %}
             <form action="#" class="sign-up-form d-flex" id="signUpForm" data-aos="fade-up" data-aos-delay="200">
-              <input type="text" id="emailInput" class="form-control" placeholder="Enter email address">
-              <input type="submit" class="btn btn-primary" value="Sign Up">
-          </form>
+                <input type="text" id="emailInput" class="form-control" placeholder="Enter email address">
+                <input type="submit" class="btn btn-primary" value="Sign Up">
+            </form>
+            {% endif %}            
 
           </div>
 
