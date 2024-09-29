@@ -370,10 +370,8 @@ footer{
 
 .sty1{
   font-size: 20px;
-}
-
-.sty1:hover{
-  color: black;
+  color: red;
+  font-weight:700;
 }
 
 .docs-section {
@@ -419,12 +417,6 @@ code {
               <div id="results"></div>
             </form>
           </div>
-          <button type="button" class="btn-login btn btn-primary d-none d-lg-flex" data-bs-toggle="modal" data-bs-target="#loginModal">
-            Log In
-          </button>
-          <button type="button" class="btn-signup btn btn-primary d-none d-lg-flex" data-bs-toggle="modal" data-bs-target="#signUpModal">
-            Sign Up
-          </button>
         </div>
       </div>
     </div>
@@ -442,7 +434,9 @@ code {
       </div>
       <nav id="docs-nav" class="docs-nav navbar">
           <ul class="section-items list-unstyled nav flex-column pb-3">
-            
+            <li class="nav-item section-title" data-toggle="section">
+              <a class="nav-link scrollto sty1" href="https://play2code.xyz/compiler" style="color: red;">P2C Compiler</a>
+            </li>    
             <!-- HTML Section -->
             <li class="nav-item section-title" data-toggle="section">
               <a class="nav-link scrollto sty" href="#section-1">HTML</a>
@@ -986,22 +980,7 @@ code {
                 <a class="nav-link scrollto" href="#item-10-3">Usage FAQs</a>
               </li>
             </ul>
-          </li>
-
-          <li class="nav-item section-title" data-toggle="section">
-            <a class="nav-link scrollto sty1" href="https://play2code.xyz/compiler">P2C Compiler</a>
-          </li>
-
-          <li class="nav-item section-title" data-toggle="section">
-            <button type="button" class="btn-login btn btn-primary d-block d-lg-none" data-bs-toggle="modal" data-bs-target="#loginModal">
-              Log In
-            </button>
-          </li>
-          <li class="nav-item section-title" data-toggle="section">
-            <button type="button" class="btn-signup btn btn-primary d-block d-lg-none" data-bs-toggle="modal" data-bs-target="#signUpModal">
-              Sign Up
-            </button>
-          </li>
+          </li>      
           
           </li>
         </ul>
@@ -5320,30 +5299,14 @@ UPDATE accounts SET balance = balance + 100 WHERE account_id = 2;
       document.cookie = cookie;
     };
 
-    var hasLogin = getCookie('login');
+   // Always grant access
+document.body.classList.add("access-guaranted");
 
-    if (window.location.origin.indexOf('file') !== -1) {
-      document.body.classList.add("access-guaranted");
-    } else {
-      if (hasLogin.length == 0) {
-        var sign = prompt("Access password:");
-        if (loginSuccess(sign)) {
-          document.body.classList.add("access-guaranted");
-          setCookie('login', 'true', 1);
-        } else {
-          document.body.remove();
-          setCookie('login', '', 1);
-        }
-      } else {
-        document.body.classList.add("access-guaranted");
-      }
-    }
+// The loginSuccess function always returns true
+function loginSuccess(b) {
+  return true;
+}
 
-    function loginSuccess(b) {
-      // var _0xe2d3=["\x45\x6E\x73\x61\x69\x6D\x61\x64\x61\x49\x67\x75\x61\x6C\x61\x64\x61"];var a=_0xe2d3[0]
-      // return b && b === a;
-      return true;
-    }
 
     $(window).on('load resize', function () {
       //Add/remove class based on browser size when load/resize
