@@ -18,19 +18,32 @@ class UserRegistrationForm(UserCreationForm):
         'placeholder': 'Enter your username',
     }), label='')  # No label for username
 
-    password1 = forms.CharField(widget=forms.PasswordInput(attrs={
-        'class': 'form-control',
-        'placeholder': 'Enter your password',
-    }), label='')  # No label for password1
+    password1 = forms.CharField(
+            widget=forms.PasswordInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Enter your password',
+            }),
+            label='',
+            
+        )
 
-    password2 = forms.CharField(widget=forms.PasswordInput(attrs={
+    password2 = forms.CharField(
+            widget=forms.PasswordInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Confirm your password',
+            }),
+            label='',
+            help_text=""
+        )
+    
+    phoneno= forms.CharField(widget=forms.NumberInput(attrs={
         'class': 'form-control',
-        'placeholder': 'Confirm your password',
-    }), label='')  # No label for password2
+        'placeholder': 'Phone no',
+    }), label='') 
 
     class Meta:
         model = CustomUser
-        fields = ["username", "email", "password1", "password2"]
+        fields = ["username", "email", "password1", "password2",'phoneno']
 
 
 class OTPVerificationForm(forms.ModelForm):
