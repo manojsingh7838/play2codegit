@@ -12,6 +12,7 @@ from django.db import models
 
 class CustomUser(AbstractUser):
     otp_token = models.CharField(max_length=32, blank=True, null=True)
+    phoneno=models.CharField(max_length=32, blank=True, null=True)
 
     class Meta:
         permissions = [
