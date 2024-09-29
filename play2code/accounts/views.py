@@ -16,27 +16,27 @@ def signup_view(request):
     if request.method == "POST":
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
-            user = form.save(commit=False)
-            user.is_active = False  
+            user = form.save(commit=True)
+            user.is_active = True  
             user.save()
-            otp_code = random.randint(100000, 999999)
-            OTP.objects.create(user=user, otp=str(otp_code))
+            # otp_code = random.randint(100000, 999999)
+            # OTP.objects.create(user=user, otp=str(otp_code))
 
             # Send OTP via email
-            send_mail(
-                "Your OTP Code",
-                f"Your OTP is {otp_code}.",
-                "play2code@outlook.com",
-                [user.email],
-                fail_silently=False,
-            )
+            # send_mail(
+            #     "Your OTP Code",
+            #     f"Your OTP is {otp_code}.",
+            #     "play2code@outlook.com",
+            #     [user.email],
+            #     fail_silently=False,
+            # )
 
             # Use a token instead of email in the URL
-            token = get_random_string(length=32)
-            user.otp_token = token
+            # token = get_random_string(length=32)
+            # user.otp_token = token
             user.save()
 
-            return redirect(f"/account/otp-auth/?token={token}")
+            return redirect(f"/account/login/")
     else:
         form = UserRegistrationForm()
     return render(request, "signup.html", {"form": form})
