@@ -102,6 +102,7 @@ class DataSciencePayment(models.Model):
     name = models.CharField(max_length=50)
     account_holder = models.CharField(max_length=50)
     created_at = models.DateTimeField(auto_now_add=True)
+    pen= models.CharField(max_length=50)
 
     def __str__(self):
         return f"{self.name} - {self.course_name}"
