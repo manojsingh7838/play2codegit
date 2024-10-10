@@ -102,7 +102,7 @@ class DataSciencePayment(models.Model):
     name = models.CharField(max_length=50)
     account_holder = models.CharField(max_length=50)
     created_at = models.DateTimeField(auto_now_add=True)
-    pen= models.CharField(max_length=50,null=True,blank=True)
+    # pen= models.CharField(max_length=50,null=True,blank=True)
     pencil=models.IntegerField(max_length=50,null=True,blank=True)
 
     def __str__(self):
