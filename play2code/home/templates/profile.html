@@ -1,0 +1,201 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Page</title>
+    <link rel="shortcut icon" href="{% static 'images/PLAY 2 CODE.png' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: rgb(31, 71, 99);
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            
+                margin: 0 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 900px;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .profile-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-card img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .profile-card h2 {
+            color: #333;
+            margin: 10px 0;
+            font-size: 26px;
+        }
+
+        .profile-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .profile-info {
+            margin: 20px 0;
+            text-align: left;
+            width: 100%;
+            min-width: 300px;
+        }
+
+        .profile-info .info-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .profile-info .info-row span {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .profile-info .info-row .value {
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .profile-info {
+                width: 100%;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .profile-card img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .profile-card h2 {
+                font-size: 22px;
+            }
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo a {
+            text-decoration: none;
+            font-size: 35px;
+            color: #ffffff;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo .logo-text {
+            color: #ffffff;
+            margin-right: 5px;
+        }
+
+        .logo .text-alt .two {
+            color: red;
+            font-weight: 800;
+            font-size: 38px;
+        }
+
+        .logo .code {
+            font-weight: 100;
+            font-size: 35px;
+        }
+
+        @media (max-width: 768px) {
+            .logo a {
+                font-size: 28px;
+            }
+
+            .logo .text-alt .two {
+                font-size: 32px;
+            }
+
+            .logo .code {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo a {
+                font-size: 23px;
+            }
+
+            .logo .text-alt .two {
+                font-size: 25px;
+            }
+
+            .logo .code {
+                font-size: 23px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <a href="https://play2code.xyz" class="text-white">
+            <span class="logo-text">PLAY<span class="text-alt"><span class="two">2</span><span class="code">CODE</span></span></span>
+        </a>
+    </div>
+    <div class="container">
+        <div class="profile-card">
+            <img src="{% static 'images/profile.jpg' %}" alt="Profile Picture" style="border:solid">
+            <h2>{{ user.username }}</h2>
+        </div>
+        <div class="profile-info">
+            <div class="info-row">
+                <span>Username:</span>
+                <div class="value">{{user.username}}</div>
+            </div>
+            <div class="info-row">
+                <span>Email:</span>
+                <div class="value">{{user.email}}</div>
+            </div>
+            <div class="info-row">
+                <span>Phone:</span>
+                <div class="value">{{user.phoneno}}</div>
+            </div>
+            <div class="info-row">
+                <span>Location:</span>
+                <div class="value">New Delhi, India</div>
+            </div>
+            {% comment %} <div class="info-row">
+                <span>Skills:</span>
+                <div class="value">Python, Django, API Development</div>
+            </div> {% endcomment %}
+        </div>
+    </div>
+</body>
+</html>
