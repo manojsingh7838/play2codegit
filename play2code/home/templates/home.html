@@ -33,6 +33,9 @@
   <title>PLAY2CODE | Home</title>
 </head>
 <style>
+  .dropdown-menu.show{
+    position:relative !important
+  }
   .modal-header {
     border-bottom: none;
     padding-bottom: 1.5rem;
@@ -760,7 +763,7 @@ footer a:hover {
         <div class="row align-items-center">
           
           
-          <div class="col-12 col-sm-12 col-lg-12 site-navigation text-center">
+          <div class="col-12 col-sm-12 col-lg-12 site-navigation text-center d-flex align-items-center justify-content-center">
             <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu">
               <li class="active"><a href="https://play2code.xyz">Home</a></li>
               <li class="has-children">
@@ -791,8 +794,40 @@ footer a:hover {
               <li><a href="#high">Contact us</a></li>
             </ul>
 
-
 {% if user.is_authenticated %}
+
+
+<div class="dropdown js-clone-nav d-none d-lg-inline-block text-left site-menu float-right menu-absolute">
+    <li class="cta-button" style="color: #007bff;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+              <i class="fas fa-user-circle fa-2x" style="color:white"></i> 
+          </li>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+    <a class="dropdown-item" href="#">{{ user.username }}</a>
+    <a class="dropdown-item" href="#">{{ user.phoneno }}</a>
+    <a class="dropdown-item" href="{% url 'logout' %}">Log Out</a>
+  </div>
+</div>
+
+
+
+    {% comment %} <ul class=" ">
+        <li class="cta-button" style="color: #007bff;">
+            <i class="fas fa-user-circle fa-2x"></i> {{ user.username }}
+        </li>
+        <li class="cta-button">
+            <a href="{% url 'logout' %}">Log Out</a>
+        </li>
+    </ul> {% endcomment %}
+{% else %}
+    <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right menu-absolute">
+        <li class="cta-button"><a id="loginBtn" href="{% url 'login' %}">Log In</a></li>
+    </ul>
+{% endif %}
+
+
+
+{% comment %} {% if user.is_authenticated %}
     <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right menu-absolute">
         <li class="cta-button" style="color: #007bff;">
             <i class="fas fa-user-circle fa-2x"></i> {{ user.username }}
@@ -805,7 +840,7 @@ footer a:hover {
     <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right menu-absolute">
         <li class="cta-button"><a id="loginBtn" href="{% url 'login' %}">Log In</a></li>
     </ul>
-{% endif %}
+{% endif %} {% endcomment %}
       
 
             <a href="#" class="burger light ml-auto site-menu-toggle js-menu-toggle d-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
