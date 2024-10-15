@@ -164,13 +164,21 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # EMAIL_HOST_USER = "play2code@play2code.xyz"
 # EMAIL_HOST_PASSWORD = "YUKbQN7U0cvS"
 # DEFAULT_FROM_EMAIL = "play2code@play2code.xyz"
+# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+# EMAIL_HOST = "smtp.zoho.com"
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True  
+# EMAIL_HOST_USER = "support@seawealth.io"  
+# EMAIL_HOST_PASSWORD = "gi2vazS%" 
+# DEFAULT_FROM_EMAIL = "support@seawealth.io"  
+
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.zoho.com"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True  
-EMAIL_HOST_USER = "support@seawealth.io"  
-EMAIL_HOST_PASSWORD = "gi2vazS%" 
-DEFAULT_FROM_EMAIL = "support@seawealth.io"  
+EMAIL_HOST = "smtppro.zoho.in"
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
+EMAIL_HOST_USER = "support@seawealth.io"  # Your domain-based email
+EMAIL_HOST_PASSWORD = "gi2vazS%"  # Your password
+DEFAULT_FROM_EMAIL = "support@seawealth.io"  # Same email as above
 
 
 class MyCustomMiddleware:
