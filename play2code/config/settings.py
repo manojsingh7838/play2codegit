@@ -186,7 +186,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True  
 
 EMAIL_HOST_USER = 'play2codecontact@gmail.com'  
-EMAIL_HOST_PASSWORD = 'qfsk khhw dkfo afms'  
+EMAIL_HOST_PASSWORD = 'qfskkhhwdkfoafms'  
 
 
 
