@@ -180,6 +180,13 @@ DEFAULT_FROM_EMAIL = "play2code@play2code.xyz"
 # EMAIL_HOST_PASSWORD = "gi2vazS%"  # Your password
 # DEFAULT_FROM_EMAIL = "support@seawealth.io"  # Same email as above
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'play2codecontact@gmail.com'  # Your Gmail address
+EMAIL_HOST_PASSWORD = '@Manojsingh78'  # The app password you generated
+
 
 class MyCustomMiddleware:
     def __init__(self, get_response):
